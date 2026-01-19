@@ -1,0 +1,20 @@
+# Build artifacts
+deadlock_sim
+deadlock_sim.exe
+*.o
+*.a
+*.so
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*~
