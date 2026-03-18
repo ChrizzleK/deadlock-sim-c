@@ -1,0 +1,28 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Deadlock UML" id="XqPWKH46BSEcT12S82Ic">
+    <mxGraphModel dx="1389" dy="835" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="POZHC4El1OlMxx0RYHhL-17" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="Process&lt;div&gt;&lt;br&gt;- id: int&lt;br&gt;- allocated: vector&lt;br&gt;- requested: vector&lt;/div&gt;&lt;div&gt;&lt;br&gt;+ requestResource()&lt;br&gt;+ allocateResource()&lt;br&gt;+ releaseAll()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="250" x="100" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="POZHC4El1OlMxx0RYHhL-18" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="DeadlockManager&lt;div&gt;&lt;br&gt;- processes: vector&lt;br&gt;- resources: map&lt;br&gt;&lt;br&gt;+ addProcess()&lt;br&gt;+ addResource()&lt;br&gt;+ requestResource()&lt;br&gt;+ detectDeadlock()&lt;br&gt;+ resolveDeadlock()&lt;br&gt;+ printState()&lt;br&gt;+ printGraph()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="260" width="300" x="400" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="POZHC4El1OlMxx0RYHhL-19" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="Resource&lt;br&gt;&lt;br&gt;- id: int&lt;br&gt;- available: int" vertex="1">
+          <mxGeometry height="120" width="220" x="800" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="POZHC4El1OlMxx0RYHhL-20" edge="1" parent="1" source="POZHC4El1OlMxx0RYHhL-18" style="endArrow=block;" target="POZHC4El1OlMxx0RYHhL-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="POZHC4El1OlMxx0RYHhL-21" edge="1" parent="1" source="POZHC4El1OlMxx0RYHhL-18" style="endArrow=block;" target="POZHC4El1OlMxx0RYHhL-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="POZHC4El1OlMxx0RYHhL-23" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;br&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="120" width="180" x="140" y="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
