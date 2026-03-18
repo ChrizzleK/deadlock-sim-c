@@ -1,0 +1,31 @@
+PROJECT_NAME           = "Deadlock Simulator (C Backend)"
+OUTPUT_DIRECTORY       = docs
+
+INPUT                  = src
+RECURSIVE              = YES
+FILE_PATTERNS          = *.h *.c
+
+EXTRACT_ALL            = YES
+EXTRACT_STATIC         = YES
+SOURCE_BROWSER         = YES
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = YES
+
+# Für PDF/LaTeX:
+LATEX_OUTPUT           = latex
+PDF_HYPERLINKS         = YES
+USE_PDFLATEX           = YES
+
+# Diagramme (falls Graphviz installiert ist):
+HAVE_DOT               = YES
+UML_LOOK               = YES
+CLASS_DIAGRAMS         = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+
+# Optional: damit die Diagramme nicht zu riesig werden
+DOT_IMAGE_FORMAT       = svg
+INTERACTIVE_SVG        = YES

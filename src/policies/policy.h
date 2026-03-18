@@ -1,7 +1,7 @@
 #pragma once
-#include "core/model.h"
-#include "core/workload.h"
-#include "core/metrics.h"
+#include "src/core/model.h"
+#include "src/core/workload.h"
+#include "src/core/metrics.h"
 
 typedef enum { DEC_GRANT, DEC_DENY, DEC_DEFER } Decision;
 

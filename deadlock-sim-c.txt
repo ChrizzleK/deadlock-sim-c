@@ -1,0 +1,14 @@
+TEMPLATE = app
+CONFIG += console c11
+CONFIG -= app_bundle
+CONFIG -= qt
+
+# Hier alle deine .c Dateien auflisten
+SOURCES += main.c \
+           andere_datei.c
+
+# Hier alle deine .h Dateien auflisten
+HEADERS += datei.h
+
+# Falls das Projekt externe Bibliotheken braucht:
+# LIBS += -lmylib

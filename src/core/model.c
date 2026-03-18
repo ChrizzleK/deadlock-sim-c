@@ -1,4 +1,4 @@
-#include "core/model.h"
+#include "src/core/model.h"
 #include <string.h>
 
 void state_init(SystemState* s) {

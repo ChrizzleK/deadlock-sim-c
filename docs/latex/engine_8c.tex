@@ -1,0 +1,370 @@
+\doxysection{src/core/engine.c File Reference}
+\hypertarget{engine_8c}{}\label{engine_8c}\index{src/core/engine.c@{src/core/engine.c}}
+{\ttfamily \#include "{}src/core/engine.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for engine.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{engine_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{engine_8c_aa56c4f3a94086972987d63d045d6b229}{cmp\+\_\+ev}} (const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}a, const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{engine_8c_aef169f1c7e0a9d656c8c992b2de79c62}{engine\+\_\+init}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e)
+\item 
+void \mbox{\hyperlink{engine_8c_a81444ebf5d349b39f11ff6bde3c1a5c2}{engine\+\_\+set\+\_\+detector}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e, \mbox{\hyperlink{struct_detector}{Detector}} d)
+\item 
+void \mbox{\hyperlink{engine_8c_afa23042b31688798272da15fb8362d20}{engine\+\_\+set\+\_\+resolver}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e, \mbox{\hyperlink{struct_resolver}{Resolver}} r)
+\item 
+void \mbox{\hyperlink{engine_8c_a8d8b9cfc533e2d6930472a6f13bc9138}{engine\+\_\+set\+\_\+policy}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e, \mbox{\hyperlink{struct_request_policy}{Request\+Policy}} p)
+\item 
+void \mbox{\hyperlink{engine_8c_af5276fe9fb89c4acc9541144186d9656}{engine\+\_\+add\+\_\+event}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e, \mbox{\hyperlink{struct_event}{Event}} ev)
+\item 
+void \mbox{\hyperlink{engine_8c_a07303577794ddbc341a62c34c3246648}{engine\+\_\+load\+\_\+events}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e, const \mbox{\hyperlink{struct_event_list}{Event\+List}} \texorpdfstring{$\ast$}{*}list)
+\item 
+static void \mbox{\hyperlink{engine_8c_a17f0fe3d39f4a609a92b861e7733109b}{sort\+\_\+queue}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e)
+\item 
+static void \mbox{\hyperlink{engine_8c_a5710b628059d89386cee9ec869947a71}{do\+\_\+deadlock\+\_\+check}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e, int now)
+\item 
+static void \mbox{\hyperlink{engine_8c_afcdf5ae2c175384fa2bf3acf6c00249f}{handle\+\_\+arrive}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e, const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}ev)
+\item 
+static void \mbox{\hyperlink{engine_8c_ab9eab32ff555a432bc94e74ce2e5ae47}{handle\+\_\+finish}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e, const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}ev)
+\item 
+static void \mbox{\hyperlink{engine_8c_ad75a1e07bbac11faaead826dbe7201c5}{handle\+\_\+rel}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e, const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}ev)
+\item 
+static void \mbox{\hyperlink{engine_8c_ab3e07adfc8a75247bf95bc59c57518ed}{handle\+\_\+req}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e, const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}ev)
+\item 
+static void \mbox{\hyperlink{engine_8c_a7a920aedb9a8b2866613c1ccf2708dab}{try\+\_\+unblock}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e)
+\item 
+void \mbox{\hyperlink{engine_8c_a5215321b2359f517366504415e0001fc}{engine\+\_\+run}} (\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}e, int until\+\_\+time)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{engine_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{engine_8c_aa56c4f3a94086972987d63d045d6b229}\index{engine.c@{engine.c}!cmp\_ev@{cmp\_ev}}
+\index{cmp\_ev@{cmp\_ev}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_ev()}{cmp\_ev()}}
+{\footnotesize\ttfamily \label{engine_8c_aa56c4f3a94086972987d63d045d6b229} 
+int cmp\+\_\+ev (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00006}{6}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{engine_8c_aa56c4f3a94086972987d63d045d6b229_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_a5710b628059d89386cee9ec869947a71}\index{engine.c@{engine.c}!do\_deadlock\_check@{do\_deadlock\_check}}
+\index{do\_deadlock\_check@{do\_deadlock\_check}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{do\_deadlock\_check()}{do\_deadlock\_check()}}
+{\footnotesize\ttfamily \label{engine_8c_a5710b628059d89386cee9ec869947a71} 
+void do\+\_\+deadlock\+\_\+check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{int}]{now}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00049}{49}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{engine_8c_a5710b628059d89386cee9ec869947a71_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_af5276fe9fb89c4acc9541144186d9656}\index{engine.c@{engine.c}!engine\_add\_event@{engine\_add\_event}}
+\index{engine\_add\_event@{engine\_add\_event}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{engine\_add\_event()}{engine\_add\_event()}}
+{\footnotesize\ttfamily \label{engine_8c_af5276fe9fb89c4acc9541144186d9656} 
+void engine\+\_\+add\+\_\+event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{\mbox{\hyperlink{struct_event}{Event}}}]{ev}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00025}{25}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{engine_8c_af5276fe9fb89c4acc9541144186d9656_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_aef169f1c7e0a9d656c8c992b2de79c62}\index{engine.c@{engine.c}!engine\_init@{engine\_init}}
+\index{engine\_init@{engine\_init}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{engine\_init()}{engine\_init()}}
+{\footnotesize\ttfamily \label{engine_8c_aef169f1c7e0a9d656c8c992b2de79c62} 
+void engine\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00011}{11}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{engine_8c_aef169f1c7e0a9d656c8c992b2de79c62_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{engine_8c_aef169f1c7e0a9d656c8c992b2de79c62_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_a07303577794ddbc341a62c34c3246648}\index{engine.c@{engine.c}!engine\_load\_events@{engine\_load\_events}}
+\index{engine\_load\_events@{engine\_load\_events}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{engine\_load\_events()}{engine\_load\_events()}}
+{\footnotesize\ttfamily \label{engine_8c_a07303577794ddbc341a62c34c3246648} 
+void engine\+\_\+load\+\_\+events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{const \mbox{\hyperlink{struct_event_list}{Event\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00033}{33}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{engine_8c_a07303577794ddbc341a62c34c3246648_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{engine_8c_a07303577794ddbc341a62c34c3246648_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_a5215321b2359f517366504415e0001fc}\index{engine.c@{engine.c}!engine\_run@{engine\_run}}
+\index{engine\_run@{engine\_run}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{engine\_run()}{engine\_run()}}
+{\footnotesize\ttfamily \label{engine_8c_a5215321b2359f517366504415e0001fc} 
+void engine\+\_\+run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{int}]{until\+\_\+time}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00149}{149}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{engine_8c_a5215321b2359f517366504415e0001fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{engine_8c_a5215321b2359f517366504415e0001fc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_a81444ebf5d349b39f11ff6bde3c1a5c2}\index{engine.c@{engine.c}!engine\_set\_detector@{engine\_set\_detector}}
+\index{engine\_set\_detector@{engine\_set\_detector}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{engine\_set\_detector()}{engine\_set\_detector()}}
+{\footnotesize\ttfamily \label{engine_8c_a81444ebf5d349b39f11ff6bde3c1a5c2} 
+void engine\+\_\+set\+\_\+detector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{\mbox{\hyperlink{struct_detector}{Detector}}}]{d}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00021}{21}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{engine_8c_a81444ebf5d349b39f11ff6bde3c1a5c2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_a8d8b9cfc533e2d6930472a6f13bc9138}\index{engine.c@{engine.c}!engine\_set\_policy@{engine\_set\_policy}}
+\index{engine\_set\_policy@{engine\_set\_policy}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{engine\_set\_policy()}{engine\_set\_policy()}}
+{\footnotesize\ttfamily \label{engine_8c_a8d8b9cfc533e2d6930472a6f13bc9138} 
+void engine\+\_\+set\+\_\+policy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{\mbox{\hyperlink{struct_request_policy}{Request\+Policy}}}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00023}{23}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{engine_8c_a8d8b9cfc533e2d6930472a6f13bc9138_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_afa23042b31688798272da15fb8362d20}\index{engine.c@{engine.c}!engine\_set\_resolver@{engine\_set\_resolver}}
+\index{engine\_set\_resolver@{engine\_set\_resolver}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{engine\_set\_resolver()}{engine\_set\_resolver()}}
+{\footnotesize\ttfamily \label{engine_8c_afa23042b31688798272da15fb8362d20} 
+void engine\+\_\+set\+\_\+resolver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{\mbox{\hyperlink{struct_resolver}{Resolver}}}]{r}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00022}{22}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{engine_8c_afa23042b31688798272da15fb8362d20_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_afcdf5ae2c175384fa2bf3acf6c00249f}\index{engine.c@{engine.c}!handle\_arrive@{handle\_arrive}}
+\index{handle\_arrive@{handle\_arrive}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{handle\_arrive()}{handle\_arrive()}}
+{\footnotesize\ttfamily \label{engine_8c_afcdf5ae2c175384fa2bf3acf6c00249f} 
+void handle\+\_\+arrive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}}]{ev}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00057}{57}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{engine_8c_afcdf5ae2c175384fa2bf3acf6c00249f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{engine_8c_afcdf5ae2c175384fa2bf3acf6c00249f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_ab9eab32ff555a432bc94e74ce2e5ae47}\index{engine.c@{engine.c}!handle\_finish@{handle\_finish}}
+\index{handle\_finish@{handle\_finish}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{handle\_finish()}{handle\_finish()}}
+{\footnotesize\ttfamily \label{engine_8c_ab9eab32ff555a432bc94e74ce2e5ae47} 
+void handle\+\_\+finish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}}]{ev}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00065}{65}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{engine_8c_ab9eab32ff555a432bc94e74ce2e5ae47_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_ad75a1e07bbac11faaead826dbe7201c5}\index{engine.c@{engine.c}!handle\_rel@{handle\_rel}}
+\index{handle\_rel@{handle\_rel}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{handle\_rel()}{handle\_rel()}}
+{\footnotesize\ttfamily \label{engine_8c_ad75a1e07bbac11faaead826dbe7201c5} 
+void handle\+\_\+rel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}}]{ev}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00079}{79}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{engine_8c_ad75a1e07bbac11faaead826dbe7201c5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_ab3e07adfc8a75247bf95bc59c57518ed}\index{engine.c@{engine.c}!handle\_req@{handle\_req}}
+\index{handle\_req@{handle\_req}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{handle\_req()}{handle\_req()}}
+{\footnotesize\ttfamily \label{engine_8c_ab3e07adfc8a75247bf95bc59c57518ed} 
+void handle\+\_\+req (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}}]{ev}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00090}{90}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{engine_8c_ab3e07adfc8a75247bf95bc59c57518ed_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{engine_8c_ab3e07adfc8a75247bf95bc59c57518ed_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_a17f0fe3d39f4a609a92b861e7733109b}\index{engine.c@{engine.c}!sort\_queue@{sort\_queue}}
+\index{sort\_queue@{sort\_queue}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{sort\_queue()}{sort\_queue()}}
+{\footnotesize\ttfamily \label{engine_8c_a17f0fe3d39f4a609a92b861e7733109b} 
+void sort\+\_\+queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00037}{37}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{engine_8c_a17f0fe3d39f4a609a92b861e7733109b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{engine_8c_a17f0fe3d39f4a609a92b861e7733109b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{engine_8c_a7a920aedb9a8b2866613c1ccf2708dab}\index{engine.c@{engine.c}!try\_unblock@{try\_unblock}}
+\index{try\_unblock@{try\_unblock}!engine.c@{engine.c}}
+\doxysubsubsection{\texorpdfstring{try\_unblock()}{try\_unblock()}}
+{\footnotesize\ttfamily \label{engine_8c_a7a920aedb9a8b2866613c1ccf2708dab} 
+void try\+\_\+unblock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine}{Engine}} \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{engine_8c_source_l00128}{128}} of file \mbox{\hyperlink{engine_8c_source}{engine.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{engine_8c_a7a920aedb9a8b2866613c1ccf2708dab_icgraph}
+\end{center}
+\end{figure}

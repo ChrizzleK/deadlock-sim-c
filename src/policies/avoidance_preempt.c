@@ -1,4 +1,4 @@
-#include "policies/avoidance_preempt.h"
+#include "src/policies/avoidance_preempt.h"
 
 static Decision on_request_impl(const Event* e, SystemState* s, Metrics* m) {
   int pi = -1, ri = -1;

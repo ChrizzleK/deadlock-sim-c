@@ -1,0 +1,168 @@
+\doxysection{System\+State Struct Reference}
+\hypertarget{struct_system_state}{}\label{struct_system_state}\index{SystemState@{SystemState}}
+
+
+{\ttfamily \#include $<$model.\+h$>$}
+
+
+
+Collaboration diagram for System\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{struct_system_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_system_state_a85021e9ddb155ff702958b33c32a8ff9}{time}}
+\item 
+int \mbox{\hyperlink{struct_system_state_a59134b2862c41b90d5e181d8376096a6}{nprocs}}
+\item 
+int \mbox{\hyperlink{struct_system_state_a6361b97373de6b68ba7f168210b329df}{nres}}
+\item 
+\mbox{\hyperlink{struct_process}{Process}} \mbox{\hyperlink{struct_system_state_a6d1e10221dc5454ab0d48d7e20443144}{procs}} \mbox{[}\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\+\_\+\+PROCS}}\mbox{]}
+\item 
+\mbox{\hyperlink{struct_resource}{Resource}} \mbox{\hyperlink{struct_system_state_acedef04f9fc39afb4fe7ef5ac7ed936f}{res}} \mbox{[}\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\+\_\+\+RES}}\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_system_state_ae92a8e49f38bacaf5c81c6907d302c93}{alloc}} \mbox{[}\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\+\_\+\+PROCS}}\mbox{]}\mbox{[}\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\+\_\+\+RES}}\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_system_state_a33da57c143b9878b7dce90858c230a42}{req}} \mbox{[}\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\+\_\+\+PROCS}}\mbox{]}\mbox{[}\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\+\_\+\+RES}}\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_system_state_a7ccd3f532ff95b0474d9a5e9964c5635}{maxc}} \mbox{[}\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\+\_\+\+PROCS}}\mbox{]}\mbox{[}\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\+\_\+\+RES}}\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_system_state_a5a61f0bad77afeae6ae485849ebdd1a6}{avail}} \mbox{[}\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\+\_\+\+RES}}\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_system_state_a7c3b79c5422138c9e4876d4d96480b22}{pid\+\_\+to\+\_\+idx}} \mbox{[}\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\+\_\+\+PROCS}}\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_system_state_afa41f5644db70544612ebbfccef75039}{rid\+\_\+to\+\_\+idx}} \mbox{[}\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\+\_\+\+RES}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00021}{21}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_system_state_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_system_state_ae92a8e49f38bacaf5c81c6907d302c93}\index{SystemState@{SystemState}!alloc@{alloc}}
+\index{alloc@{alloc}!SystemState@{SystemState}}
+\doxysubsubsection{\texorpdfstring{alloc}{alloc}}
+{\footnotesize\ttfamily \label{struct_system_state_ae92a8e49f38bacaf5c81c6907d302c93} 
+int System\+State\+::alloc\mbox{[}\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\+\_\+\+PROCS}}\mbox{]}\mbox{[}\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\+\_\+\+RES}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00029}{29}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\Hypertarget{struct_system_state_a5a61f0bad77afeae6ae485849ebdd1a6}\index{SystemState@{SystemState}!avail@{avail}}
+\index{avail@{avail}!SystemState@{SystemState}}
+\doxysubsubsection{\texorpdfstring{avail}{avail}}
+{\footnotesize\ttfamily \label{struct_system_state_a5a61f0bad77afeae6ae485849ebdd1a6} 
+int System\+State\+::avail\mbox{[}\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\+\_\+\+RES}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00032}{32}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\Hypertarget{struct_system_state_a7ccd3f532ff95b0474d9a5e9964c5635}\index{SystemState@{SystemState}!maxc@{maxc}}
+\index{maxc@{maxc}!SystemState@{SystemState}}
+\doxysubsubsection{\texorpdfstring{maxc}{maxc}}
+{\footnotesize\ttfamily \label{struct_system_state_a7ccd3f532ff95b0474d9a5e9964c5635} 
+int System\+State\+::maxc\mbox{[}\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\+\_\+\+PROCS}}\mbox{]}\mbox{[}\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\+\_\+\+RES}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00031}{31}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\Hypertarget{struct_system_state_a59134b2862c41b90d5e181d8376096a6}\index{SystemState@{SystemState}!nprocs@{nprocs}}
+\index{nprocs@{nprocs}!SystemState@{SystemState}}
+\doxysubsubsection{\texorpdfstring{nprocs}{nprocs}}
+{\footnotesize\ttfamily \label{struct_system_state_a59134b2862c41b90d5e181d8376096a6} 
+int System\+State\+::nprocs}
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00023}{23}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\Hypertarget{struct_system_state_a6361b97373de6b68ba7f168210b329df}\index{SystemState@{SystemState}!nres@{nres}}
+\index{nres@{nres}!SystemState@{SystemState}}
+\doxysubsubsection{\texorpdfstring{nres}{nres}}
+{\footnotesize\ttfamily \label{struct_system_state_a6361b97373de6b68ba7f168210b329df} 
+int System\+State\+::nres}
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00024}{24}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\Hypertarget{struct_system_state_a7c3b79c5422138c9e4876d4d96480b22}\index{SystemState@{SystemState}!pid\_to\_idx@{pid\_to\_idx}}
+\index{pid\_to\_idx@{pid\_to\_idx}!SystemState@{SystemState}}
+\doxysubsubsection{\texorpdfstring{pid\_to\_idx}{pid\_to\_idx}}
+{\footnotesize\ttfamily \label{struct_system_state_a7c3b79c5422138c9e4876d4d96480b22} 
+int System\+State\+::pid\+\_\+to\+\_\+idx\mbox{[}\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\+\_\+\+PROCS}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00034}{34}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\Hypertarget{struct_system_state_a6d1e10221dc5454ab0d48d7e20443144}\index{SystemState@{SystemState}!procs@{procs}}
+\index{procs@{procs}!SystemState@{SystemState}}
+\doxysubsubsection{\texorpdfstring{procs}{procs}}
+{\footnotesize\ttfamily \label{struct_system_state_a6d1e10221dc5454ab0d48d7e20443144} 
+\mbox{\hyperlink{struct_process}{Process}} System\+State\+::procs\mbox{[}\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\+\_\+\+PROCS}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00026}{26}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\Hypertarget{struct_system_state_a33da57c143b9878b7dce90858c230a42}\index{SystemState@{SystemState}!req@{req}}
+\index{req@{req}!SystemState@{SystemState}}
+\doxysubsubsection{\texorpdfstring{req}{req}}
+{\footnotesize\ttfamily \label{struct_system_state_a33da57c143b9878b7dce90858c230a42} 
+int System\+State\+::req\mbox{[}\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\+\_\+\+PROCS}}\mbox{]}\mbox{[}\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\+\_\+\+RES}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00030}{30}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\Hypertarget{struct_system_state_acedef04f9fc39afb4fe7ef5ac7ed936f}\index{SystemState@{SystemState}!res@{res}}
+\index{res@{res}!SystemState@{SystemState}}
+\doxysubsubsection{\texorpdfstring{res}{res}}
+{\footnotesize\ttfamily \label{struct_system_state_acedef04f9fc39afb4fe7ef5ac7ed936f} 
+\mbox{\hyperlink{struct_resource}{Resource}} System\+State\+::res\mbox{[}\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\+\_\+\+RES}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00027}{27}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\Hypertarget{struct_system_state_afa41f5644db70544612ebbfccef75039}\index{SystemState@{SystemState}!rid\_to\_idx@{rid\_to\_idx}}
+\index{rid\_to\_idx@{rid\_to\_idx}!SystemState@{SystemState}}
+\doxysubsubsection{\texorpdfstring{rid\_to\_idx}{rid\_to\_idx}}
+{\footnotesize\ttfamily \label{struct_system_state_afa41f5644db70544612ebbfccef75039} 
+int System\+State\+::rid\+\_\+to\+\_\+idx\mbox{[}\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\+\_\+\+RES}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00035}{35}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\Hypertarget{struct_system_state_a85021e9ddb155ff702958b33c32a8ff9}\index{SystemState@{SystemState}!time@{time}}
+\index{time@{time}!SystemState@{SystemState}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily \label{struct_system_state_a85021e9ddb155ff702958b33c32a8ff9} 
+int System\+State\+::time}
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00022}{22}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/core/\mbox{\hyperlink{model_8h}{model.\+h}}\end{DoxyCompactItemize}

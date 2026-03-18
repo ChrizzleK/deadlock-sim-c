@@ -1,0 +1,96 @@
+\doxysection{src/policies/detector\+\_\+matrix.c File Reference}
+\hypertarget{detector__matrix_8c}{}\label{detector__matrix_8c}\index{src/policies/detector\_matrix.c@{src/policies/detector\_matrix.c}}
+{\ttfamily \#include "{}src/policies/detector\+\_\+matrix.\+h"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for detector\+\_\+matrix.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{detector__matrix_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{detector__matrix_8c_ae49622d22688d2b6f7c80d47f0b0f485}{leq\+\_\+need}} (const int \texorpdfstring{$\ast$}{*}need, const int \texorpdfstring{$\ast$}{*}work, int nres)
+\item 
+static int \mbox{\hyperlink{detector__matrix_8c_a799885c5715d470f18a66e692715652f}{detect\+\_\+impl}} (const \mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{struct_deadlock_set}{Deadlock\+Set}} \texorpdfstring{$\ast$}{*}out, int max\+\_\+sets)
+\item 
+\mbox{\hyperlink{struct_detector}{Detector}} \mbox{\hyperlink{detector__matrix_8c_a27be77df0494a73757489571afd186c6}{detector\+\_\+matrix}} (void)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{detector__matrix_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{detector__matrix_8c_a799885c5715d470f18a66e692715652f}\index{detector\_matrix.c@{detector\_matrix.c}!detect\_impl@{detect\_impl}}
+\index{detect\_impl@{detect\_impl}!detector\_matrix.c@{detector\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{detect\_impl()}{detect\_impl()}}
+{\footnotesize\ttfamily \label{detector__matrix_8c_a799885c5715d470f18a66e692715652f} 
+int detect\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{\mbox{\hyperlink{struct_deadlock_set}{Deadlock\+Set}} \texorpdfstring{$\ast$}{*}}]{out}{, }\item[{int}]{max\+\_\+sets}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{detector__matrix_8c_source_l00009}{9}} of file \mbox{\hyperlink{detector__matrix_8c_source}{detector\+\_\+matrix.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{detector__matrix_8c_a799885c5715d470f18a66e692715652f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{detector__matrix_8c_a799885c5715d470f18a66e692715652f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{detector__matrix_8c_a27be77df0494a73757489571afd186c6}\index{detector\_matrix.c@{detector\_matrix.c}!detector\_matrix@{detector\_matrix}}
+\index{detector\_matrix@{detector\_matrix}!detector\_matrix.c@{detector\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{detector\_matrix()}{detector\_matrix()}}
+{\footnotesize\ttfamily \label{detector__matrix_8c_a27be77df0494a73757489571afd186c6} 
+\mbox{\hyperlink{struct_detector}{Detector}} detector\+\_\+matrix (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{detector__matrix_8c_source_l00040}{40}} of file \mbox{\hyperlink{detector__matrix_8c_source}{detector\+\_\+matrix.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{detector__matrix_8c_a27be77df0494a73757489571afd186c6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{detector__matrix_8c_a27be77df0494a73757489571afd186c6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{detector__matrix_8c_ae49622d22688d2b6f7c80d47f0b0f485}\index{detector\_matrix.c@{detector\_matrix.c}!leq\_need@{leq\_need}}
+\index{leq\_need@{leq\_need}!detector\_matrix.c@{detector\_matrix.c}}
+\doxysubsubsection{\texorpdfstring{leq\_need()}{leq\_need()}}
+{\footnotesize\ttfamily \label{detector__matrix_8c_ae49622d22688d2b6f7c80d47f0b0f485} 
+int leq\+\_\+need (\begin{DoxyParamCaption}\item[{const int \texorpdfstring{$\ast$}{*}}]{need}{, }\item[{const int \texorpdfstring{$\ast$}{*}}]{work}{, }\item[{int}]{nres}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{detector__matrix_8c_source_l00004}{4}} of file \mbox{\hyperlink{detector__matrix_8c_source}{detector\+\_\+matrix.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{detector__matrix_8c_ae49622d22688d2b6f7c80d47f0b0f485_icgraph}
+\end{center}
+\end{figure}

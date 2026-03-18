@@ -1,0 +1,29 @@
+\doxysection{policy.\+h}
+\hypertarget{policy_8h_source}{}\label{policy_8h_source}\index{src/policies/policy.h@{src/policies/policy.h}}
+\mbox{\hyperlink{policy_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{model_8h}{src/core/model.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{workload_8h}{src/core/workload.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{metrics_8h}{src/core/metrics.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00006}\mbox{\hyperlink{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9ca4bba93712ae9e608a8f3177affa44621}{00006}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ \mbox{\hyperlink{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9caecb536c8a1447ee692f1e992b5c07900}{DEC\_GRANT}},\ \mbox{\hyperlink{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9cae94b739029d99de045516b27172bc4eb}{DEC\_DENY}},\ \mbox{\hyperlink{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9ca4bba93712ae9e608a8f3177affa44621}{DEC\_DEFER}}\ \}\ \mbox{\hyperlink{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9c}{Decision}};}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00008}\mbox{\hyperlink{struct_deadlock_set}{00008}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00009}\mbox{\hyperlink{struct_deadlock_set_aeb308819be34a2a1355ca8246d4e1ff2}{00009}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_deadlock_set_aeb308819be34a2a1355ca8246d4e1ff2}{pids}}[\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\_PROCS}}];}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00010}\mbox{\hyperlink{struct_deadlock_set_aec943b70ee4976404f8c777f6f876a07}{00010}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_deadlock_set_aec943b70ee4976404f8c777f6f876a07}{len}};}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00011}00011\ \}\ \mbox{\hyperlink{struct_deadlock_set}{DeadlockSet}};}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00013}\mbox{\hyperlink{struct_detector}{00013}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00014}\mbox{\hyperlink{struct_detector_a195ebe930e08ece2610164e0934e077e}{00014}}\ \ \ int\ (*\mbox{\hyperlink{struct_detector_a195ebe930e08ece2610164e0934e077e}{detect}})(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_system_state}{SystemState}}*\ s,\ \mbox{\hyperlink{struct_deadlock_set}{DeadlockSet}}*\ out\_sets,\ \textcolor{keywordtype}{int}\ max\_sets);}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00015}00015\ \}\ \mbox{\hyperlink{struct_detector}{Detector}};}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00017}\mbox{\hyperlink{struct_resolver}{00017}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00018}\mbox{\hyperlink{struct_resolver_ac1c8a678a0137334631d85284f5bfedd}{00018}}\ \ \ void\ (*\mbox{\hyperlink{struct_resolver_ac1c8a678a0137334631d85284f5bfedd}{resolve}})(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_deadlock_set}{DeadlockSet}}*\ d,\ \mbox{\hyperlink{struct_system_state}{SystemState}}*\ s,\ \textcolor{keywordtype}{int}\ now,\ \mbox{\hyperlink{struct_metrics}{Metrics}}*\ m);}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00019}00019\ \}\ \mbox{\hyperlink{struct_resolver}{Resolver}};}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00021}\mbox{\hyperlink{struct_request_policy}{00021}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00022}\mbox{\hyperlink{struct_request_policy_aae0192488deb4fa11607e17b1309f851}{00022}}\ \ \ \mbox{\hyperlink{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9c}{Decision}}\ (*\mbox{\hyperlink{struct_request_policy_aae0192488deb4fa11607e17b1309f851}{on\_request}})(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_event}{Event}}*\ e,\ \mbox{\hyperlink{struct_system_state}{SystemState}}*\ s,\ \mbox{\hyperlink{struct_metrics}{Metrics}}*\ m);}
+\DoxyCodeLine{\Hypertarget{policy_8h_source_l00023}00023\ \}\ \mbox{\hyperlink{struct_request_policy}{RequestPolicy}};}
+
+\end{DoxyCode}

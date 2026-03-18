@@ -1,0 +1,31 @@
+\doxysection{resolver\+\_\+rollback.\+c}
+\hypertarget{resolver__rollback_8c_source}{}\label{resolver__rollback_8c_source}\index{src/policies/resolver\_rollback.c@{src/policies/resolver\_rollback.c}}
+\mbox{\hyperlink{resolver__rollback_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resolver__rollback_8h}{src/policies/resolver\_rollback.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00003}\mbox{\hyperlink{resolver__rollback_8c_a8d591af0b31d90b2a9298ae8250393a1}{00003}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{resolver__rollback_8c_a8d591af0b31d90b2a9298ae8250393a1}{resolve\_impl}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_deadlock_set}{DeadlockSet}}*\ d,\ \mbox{\hyperlink{struct_system_state}{SystemState}}*\ s,\ \textcolor{keywordtype}{int}\ now,\ \mbox{\hyperlink{struct_metrics}{Metrics}}*\ m)\ \{}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00004}00004\ \ \ (void)now;}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00005}00005\ \ \ \textcolor{keywordflow}{if}\ (d-\/>\mbox{\hyperlink{struct_deadlock_set_aec943b70ee4976404f8c777f6f876a07}{len}}\ ==\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00007}00007\ \ \ \textcolor{keywordtype}{int}\ pid\ =\ d-\/>\mbox{\hyperlink{struct_deadlock_set_aeb308819be34a2a1355ca8246d4e1ff2}{pids}}[0];}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00008}00008\ \ \ \textcolor{keywordtype}{int}\ pi\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00009}00009\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;i<s-\/>\mbox{\hyperlink{struct_system_state_a59134b2862c41b90d5e181d8376096a6}{nprocs}};i++)\ \textcolor{keywordflow}{if}\ (s-\/>\mbox{\hyperlink{struct_system_state_a6d1e10221dc5454ab0d48d7e20443144}{procs}}[i].\mbox{\hyperlink{struct_process_a595b4f93d83869f5cc3681cfeebc5609}{pid}}\ ==\ pid)\ \{\ pi=i;\ \textcolor{keywordflow}{break};\ \}}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00010}00010\ \ \ \textcolor{keywordflow}{if}\ (pi<0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00012}00012\ \ \ s-\/>\mbox{\hyperlink{struct_system_state_a6d1e10221dc5454ab0d48d7e20443144}{procs}}[pi].\mbox{\hyperlink{struct_process_a8f83d8067d6fc8e0d050b6d34009e349}{state}}\ =\ \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ada8bfc193a386b0d903d46d877986ac5f6}{PS\_ROLLED\_BACK}};}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00013}00013\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ r=0;r<s-\/>\mbox{\hyperlink{struct_system_state_a6361b97373de6b68ba7f168210b329df}{nres}};r++)\ \{}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (s-\/>\mbox{\hyperlink{struct_system_state_ae92a8e49f38bacaf5c81c6907d302c93}{alloc}}[pi][r]\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00015}00015\ \ \ \ \ \ \ s-\/>\mbox{\hyperlink{struct_system_state_a5a61f0bad77afeae6ae485849ebdd1a6}{avail}}[r]\ +=\ s-\/>\mbox{\hyperlink{struct_system_state_ae92a8e49f38bacaf5c81c6907d302c93}{alloc}}[pi][r];}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00016}00016\ \ \ \ \ \ \ s-\/>\mbox{\hyperlink{struct_system_state_ae92a8e49f38bacaf5c81c6907d302c93}{alloc}}[pi][r]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00017}00017\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00018}00018\ \ \ \ \ s-\/>\mbox{\hyperlink{struct_system_state_a33da57c143b9878b7dce90858c230a42}{req}}[pi][r]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00019}00019\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00020}00020\ \ \ m-\/>\mbox{\hyperlink{struct_metrics_aab0fb07e4e61274c4d2bd8c691903f0b}{rollbacks}}++;}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00023}\mbox{\hyperlink{resolver__rollback_8c_a67a43d286465df8acf04494205b57db5}{00023}}\ \mbox{\hyperlink{struct_resolver}{Resolver}}\ \mbox{\hyperlink{resolver__rollback_8c_a67a43d286465df8acf04494205b57db5}{resolver\_rollback}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00024}00024\ \ \ \mbox{\hyperlink{struct_resolver}{Resolver}}\ r;\ r.\mbox{\hyperlink{struct_resolver_ac1c8a678a0137334631d85284f5bfedd}{resolve}}\ =\ \mbox{\hyperlink{resolver__abort_8c_a8d591af0b31d90b2a9298ae8250393a1}{resolve\_impl}};\ \textcolor{keywordflow}{return}\ r;}
+\DoxyCodeLine{\Hypertarget{resolver__rollback_8c_source_l00025}00025\ \}}
+
+\end{DoxyCode}

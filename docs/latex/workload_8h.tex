@@ -1,0 +1,151 @@
+\doxysection{src/core/workload.h File Reference}
+\hypertarget{workload_8h}{}\label{workload_8h}\index{src/core/workload.h@{src/core/workload.h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for workload.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{workload_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{workload_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_event}{Event}}
+\item 
+struct \mbox{\hyperlink{struct_event_list}{Event\+List}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{Event\+Type}} \{ \newline
+\mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faae58b016de77159629bc97d167f63a789}{EV\+\_\+\+ARRIVE}}
+, \mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faaca2ebb2a258a11060a5368cc0d5486d3}{EV\+\_\+\+REQ}}
+, \mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faae302a108a09738c00d4bd10c50e7490f}{EV\+\_\+\+REL}}
+, \mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faa38e6c32c9ae0d3b58920716a3edff872}{EV\+\_\+\+FINISH}}
+, \newline
+\mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faa63c97e6118e58eac97001417bed8e671}{EV\+\_\+\+CHECK}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_event_list}{Event\+List}} \mbox{\hyperlink{workload_8h_ae8940714faba6c453d0579d283ad9b2b}{load\+\_\+workload\+\_\+csv}} (const char \texorpdfstring{$\ast$}{*}path)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{workload_8h_a96961176aa28bd6076ab6a68d274b952}{event\+\_\+type\+\_\+name}} (\mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{Event\+Type}} t)
+\item 
+int \mbox{\hyperlink{workload_8h_a080aac891486fed820877bbc65e14677}{parse\+\_\+event\+\_\+type}} (const char \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{Event\+Type}} \texorpdfstring{$\ast$}{*}out)
+\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{workload_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}\index{workload.h@{workload.h}!EventType@{EventType}}
+\index{EventType@{EventType}!workload.h@{workload.h}}
+\doxysubsubsection{\texorpdfstring{EventType}{EventType}}
+{\footnotesize\ttfamily \label{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6fa} 
+enum \mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{Event\+Type}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EV\_ARRIVE@{EV\_ARRIVE}!workload.h@{workload.h}}\index{workload.h@{workload.h}!EV\_ARRIVE@{EV\_ARRIVE}}}\Hypertarget{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faae58b016de77159629bc97d167f63a789}\label{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faae58b016de77159629bc97d167f63a789} 
+EV\+\_\+\+ARRIVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EV\_REQ@{EV\_REQ}!workload.h@{workload.h}}\index{workload.h@{workload.h}!EV\_REQ@{EV\_REQ}}}\Hypertarget{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faaca2ebb2a258a11060a5368cc0d5486d3}\label{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faaca2ebb2a258a11060a5368cc0d5486d3} 
+EV\+\_\+\+REQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EV\_REL@{EV\_REL}!workload.h@{workload.h}}\index{workload.h@{workload.h}!EV\_REL@{EV\_REL}}}\Hypertarget{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faae302a108a09738c00d4bd10c50e7490f}\label{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faae302a108a09738c00d4bd10c50e7490f} 
+EV\+\_\+\+REL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EV\_FINISH@{EV\_FINISH}!workload.h@{workload.h}}\index{workload.h@{workload.h}!EV\_FINISH@{EV\_FINISH}}}\Hypertarget{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faa38e6c32c9ae0d3b58920716a3edff872}\label{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faa38e6c32c9ae0d3b58920716a3edff872} 
+EV\+\_\+\+FINISH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EV\_CHECK@{EV\_CHECK}!workload.h@{workload.h}}\index{workload.h@{workload.h}!EV\_CHECK@{EV\_CHECK}}}\Hypertarget{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faa63c97e6118e58eac97001417bed8e671}\label{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6faa63c97e6118e58eac97001417bed8e671} 
+EV\+\_\+\+CHECK&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{workload_8h_source_l00004}{4}} of file \mbox{\hyperlink{workload_8h_source}{workload.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{workload_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{workload_8h_a96961176aa28bd6076ab6a68d274b952}\index{workload.h@{workload.h}!event\_type\_name@{event\_type\_name}}
+\index{event\_type\_name@{event\_type\_name}!workload.h@{workload.h}}
+\doxysubsubsection{\texorpdfstring{event\_type\_name()}{event\_type\_name()}}
+{\footnotesize\ttfamily \label{workload_8h_a96961176aa28bd6076ab6a68d274b952} 
+const char \texorpdfstring{$\ast$}{*} event\+\_\+type\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{Event\+Type}}}]{t}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{workload_8c_source_l00007}{7}} of file \mbox{\hyperlink{workload_8c_source}{workload.\+c}}.
+
+\Hypertarget{workload_8h_ae8940714faba6c453d0579d283ad9b2b}\index{workload.h@{workload.h}!load\_workload\_csv@{load\_workload\_csv}}
+\index{load\_workload\_csv@{load\_workload\_csv}!workload.h@{workload.h}}
+\doxysubsubsection{\texorpdfstring{load\_workload\_csv()}{load\_workload\_csv()}}
+{\footnotesize\ttfamily \label{workload_8h_ae8940714faba6c453d0579d283ad9b2b} 
+\mbox{\hyperlink{struct_event_list}{Event\+List}} load\+\_\+workload\+\_\+csv (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{workload_8c_source_l00027}{27}} of file \mbox{\hyperlink{workload_8c_source}{workload.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{workload_8h_ae8940714faba6c453d0579d283ad9b2b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{workload_8h_ae8940714faba6c453d0579d283ad9b2b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{workload_8h_a080aac891486fed820877bbc65e14677}\index{workload.h@{workload.h}!parse\_event\_type@{parse\_event\_type}}
+\index{parse\_event\_type@{parse\_event\_type}!workload.h@{workload.h}}
+\doxysubsubsection{\texorpdfstring{parse\_event\_type()}{parse\_event\_type()}}
+{\footnotesize\ttfamily \label{workload_8h_a080aac891486fed820877bbc65e14677} 
+int parse\+\_\+event\+\_\+type (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{\mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{Event\+Type}} \texorpdfstring{$\ast$}{*}}]{out}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{workload_8c_source_l00018}{18}} of file \mbox{\hyperlink{workload_8c_source}{workload.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{workload_8h_a080aac891486fed820877bbc65e14677_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{workload_8h_a080aac891486fed820877bbc65e14677_icgraph}
+\end{center}
+\end{figure}

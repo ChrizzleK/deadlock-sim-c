@@ -1,0 +1,47 @@
+\doxysection{model.\+h}
+\hypertarget{model_8h_source}{}\label{model_8h_source}\index{src/core/model.h@{src/core/model.h}}
+\mbox{\hyperlink{model_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00004}\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{00004}}\ \textcolor{preprocessor}{\#define\ MAX\_PROCS\ 128}}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00005}\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{00005}}\ \textcolor{preprocessor}{\#define\ MAX\_RES\ 64}}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00007}\mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ad}{00007}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022adac47f7b586fa1283d87671f34b655fa7d}{PS\_NEW}},\ \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022adad704bca1f4a52c376b2fc453fe8ecc9a}{PS\_READY}},\ \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ada0abc21448f7a1b6511a02a8f74baab74}{PS\_RUNNING}},\ \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ada04c361142369a00a37063d0e983d1648}{PS\_BLOCKED}},\ \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022adac4bd92270ab58449a1752f67ec9e7090}{PS\_FINISHED}},\ \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ada6538f10c8cbb5dbd408a965b5548f739}{PS\_ABORTED}},\ \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ada8bfc193a386b0d903d46d877986ac5f6}{PS\_ROLLED\_BACK}}\ \}\ \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ad}{ProcState}};}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00009}\mbox{\hyperlink{struct_process}{00009}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00010}\mbox{\hyperlink{struct_process_a595b4f93d83869f5cc3681cfeebc5609}{00010}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_process_a595b4f93d83869f5cc3681cfeebc5609}{pid}};}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00011}\mbox{\hyperlink{struct_process_a8f83d8067d6fc8e0d050b6d34009e349}{00011}}\ \ \ \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ad}{ProcState}}\ \mbox{\hyperlink{struct_process_a8f83d8067d6fc8e0d050b6d34009e349}{state}};}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00012}\mbox{\hyperlink{struct_process_af87104e4190cb92aa510abc8647b318f}{00012}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_process_af87104e4190cb92aa510abc8647b318f}{priority}};}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00013}\mbox{\hyperlink{struct_process_a421fa1bc71f0044b034084a53ee51966}{00013}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_process_a421fa1bc71f0044b034084a53ee51966}{progress}};}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00014}00014\ \}\ \mbox{\hyperlink{struct_process}{Process}};}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00016}\mbox{\hyperlink{struct_resource}{00016}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00017}\mbox{\hyperlink{struct_resource_a708b700b709fac049abf0461972fc75e}{00017}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_resource_a708b700b709fac049abf0461972fc75e}{rid}};}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00018}\mbox{\hyperlink{struct_resource_ad9f149ff9c7459fcf3ea9b176ea43a1a}{00018}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_resource_ad9f149ff9c7459fcf3ea9b176ea43a1a}{capacity}};}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00019}00019\ \}\ \mbox{\hyperlink{struct_resource}{Resource}};}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00021}\mbox{\hyperlink{struct_system_state}{00021}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00022}\mbox{\hyperlink{struct_system_state_a85021e9ddb155ff702958b33c32a8ff9}{00022}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_system_state_a85021e9ddb155ff702958b33c32a8ff9}{time}};}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00023}\mbox{\hyperlink{struct_system_state_a59134b2862c41b90d5e181d8376096a6}{00023}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_system_state_a59134b2862c41b90d5e181d8376096a6}{nprocs}};}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00024}\mbox{\hyperlink{struct_system_state_a6361b97373de6b68ba7f168210b329df}{00024}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_system_state_a6361b97373de6b68ba7f168210b329df}{nres}};}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00026}\mbox{\hyperlink{struct_system_state_a6d1e10221dc5454ab0d48d7e20443144}{00026}}\ \ \ \mbox{\hyperlink{struct_process}{Process}}\ \mbox{\hyperlink{struct_system_state_a6d1e10221dc5454ab0d48d7e20443144}{procs}}[\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\_PROCS}}];}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00027}\mbox{\hyperlink{struct_system_state_acedef04f9fc39afb4fe7ef5ac7ed936f}{00027}}\ \ \ \mbox{\hyperlink{struct_resource}{Resource}}\ \mbox{\hyperlink{struct_system_state_acedef04f9fc39afb4fe7ef5ac7ed936f}{res}}[\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\_RES}}];}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00029}\mbox{\hyperlink{struct_system_state_ae92a8e49f38bacaf5c81c6907d302c93}{00029}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_system_state_ae92a8e49f38bacaf5c81c6907d302c93}{alloc}}[\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\_PROCS}}][\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\_RES}}];}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00030}\mbox{\hyperlink{struct_system_state_a33da57c143b9878b7dce90858c230a42}{00030}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_system_state_a33da57c143b9878b7dce90858c230a42}{req}}[\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\_PROCS}}][\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\_RES}}];}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00031}\mbox{\hyperlink{struct_system_state_a7ccd3f532ff95b0474d9a5e9964c5635}{00031}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_system_state_a7ccd3f532ff95b0474d9a5e9964c5635}{maxc}}[\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\_PROCS}}][\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\_RES}}];}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00032}\mbox{\hyperlink{struct_system_state_a5a61f0bad77afeae6ae485849ebdd1a6}{00032}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_system_state_a5a61f0bad77afeae6ae485849ebdd1a6}{avail}}[\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\_RES}}];}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00034}\mbox{\hyperlink{struct_system_state_a7c3b79c5422138c9e4876d4d96480b22}{00034}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_system_state_a7c3b79c5422138c9e4876d4d96480b22}{pid\_to\_idx}}[\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\_PROCS}}];}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00035}\mbox{\hyperlink{struct_system_state_afa41f5644db70544612ebbfccef75039}{00035}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_system_state_afa41f5644db70544612ebbfccef75039}{rid\_to\_idx}}[\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\_RES}}];}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00036}00036\ \}\ \mbox{\hyperlink{struct_system_state}{SystemState}};}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00038}00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{model_8h_a0576b308b7a523481db25f3ca758ecef}{state\_init}}(\mbox{\hyperlink{struct_system_state}{SystemState}}*\ s);}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00039}00039\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{model_8h_a3e8829e3218c3aa91904341746b9ca25}{ensure\_proc}}(\mbox{\hyperlink{struct_system_state}{SystemState}}*\ s,\ \textcolor{keywordtype}{int}\ pid);}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00040}00040\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{model_8h_aa33a951e7c1123436bc3b03254884e9a}{ensure\_res}}(\mbox{\hyperlink{struct_system_state}{SystemState}}*\ s,\ \textcolor{keywordtype}{int}\ rid,\ \textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{\Hypertarget{model_8h_source_l00041}00041\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{model_8h_aa3c0059bcf7fe112ca3748600fb2981c}{proc\_active}}(\mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ad}{ProcState}}\ st);}
+
+\end{DoxyCode}

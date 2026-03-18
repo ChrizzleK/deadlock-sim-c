@@ -1,4 +1,4 @@
-#include "policies/detector_wfg.h"
+#include "src/policies/detector_wfg.h"
 #include <string.h>
 
 static int detect_impl(const SystemState* s, DeadlockSet* out, int max_sets) {

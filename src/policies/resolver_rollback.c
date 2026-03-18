@@ -1,4 +1,4 @@
-#include "policies/resolver_rollback.h"
+#include "src/policies/resolver_rollback.h"
 
 static void resolve_impl(const DeadlockSet* d, SystemState* s, int now, Metrics* m) {
   (void)now;

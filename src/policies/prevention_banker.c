@@ -1,4 +1,4 @@
-#include "policies/prevention_banker.h"
+#include "src/policies/prevention_banker.h"
 #include <string.h>
 
 static int safety_check(const SystemState* s) {

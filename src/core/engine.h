@@ -1,8 +1,8 @@
 #pragma once
-#include "core/model.h"
-#include "core/workload.h"
-#include "core/metrics.h"
-#include "policies/policy.h"
+#include "src/core/model.h"
+#include "src/core/workload.h"
+#include "src/core/metrics.h"
+#include "src/policies/policy.h"
 
 typedef struct {
   SystemState s;

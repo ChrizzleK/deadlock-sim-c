@@ -1,0 +1,69 @@
+\doxysection{src/policies/policy.h File Reference}
+\hypertarget{policy_8h}{}\label{policy_8h}\index{src/policies/policy.h@{src/policies/policy.h}}
+{\ttfamily \#include "{}src/core/model.\+h"{}}\newline
+{\ttfamily \#include "{}src/core/workload.\+h"{}}\newline
+{\ttfamily \#include "{}src/core/metrics.\+h"{}}\newline
+Include dependency graph for policy.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{policy_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{policy_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_deadlock_set}{Deadlock\+Set}}
+\item 
+struct \mbox{\hyperlink{struct_detector}{Detector}}
+\item 
+struct \mbox{\hyperlink{struct_resolver}{Resolver}}
+\item 
+struct \mbox{\hyperlink{struct_request_policy}{Request\+Policy}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9c}{Decision}} \{ \mbox{\hyperlink{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9caecb536c8a1447ee692f1e992b5c07900}{DEC\+\_\+\+GRANT}}
+, \mbox{\hyperlink{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9cae94b739029d99de045516b27172bc4eb}{DEC\+\_\+\+DENY}}
+, \mbox{\hyperlink{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9ca4bba93712ae9e608a8f3177affa44621}{DEC\+\_\+\+DEFER}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{policy_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9c}\index{policy.h@{policy.h}!Decision@{Decision}}
+\index{Decision@{Decision}!policy.h@{policy.h}}
+\doxysubsubsection{\texorpdfstring{Decision}{Decision}}
+{\footnotesize\ttfamily \label{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9c} 
+enum \mbox{\hyperlink{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9c}{Decision}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEC\_GRANT@{DEC\_GRANT}!policy.h@{policy.h}}\index{policy.h@{policy.h}!DEC\_GRANT@{DEC\_GRANT}}}\Hypertarget{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9caecb536c8a1447ee692f1e992b5c07900}\label{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9caecb536c8a1447ee692f1e992b5c07900} 
+DEC\+\_\+\+GRANT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEC\_DENY@{DEC\_DENY}!policy.h@{policy.h}}\index{policy.h@{policy.h}!DEC\_DENY@{DEC\_DENY}}}\Hypertarget{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9cae94b739029d99de045516b27172bc4eb}\label{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9cae94b739029d99de045516b27172bc4eb} 
+DEC\+\_\+\+DENY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEC\_DEFER@{DEC\_DEFER}!policy.h@{policy.h}}\index{policy.h@{policy.h}!DEC\_DEFER@{DEC\_DEFER}}}\Hypertarget{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9ca4bba93712ae9e608a8f3177affa44621}\label{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9ca4bba93712ae9e608a8f3177affa44621} 
+DEC\+\_\+\+DEFER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{policy_8h_source_l00006}{6}} of file \mbox{\hyperlink{policy_8h_source}{policy.\+h}}.
+

@@ -1,4 +1,4 @@
-#include "policies/detector_matrix.h"
+#include "src/policies/detector_matrix.h"
 #include <string.h>
 
 static int leq_need(const int* need, const int* work, int nres) {

@@ -1,0 +1,37 @@
+\doxysection{model.\+c}
+\hypertarget{model_8c_source}{}\label{model_8c_source}\index{src/core/model.c@{src/core/model.c}}
+\mbox{\hyperlink{model_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{model_8h}{src/core/model.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00004}\mbox{\hyperlink{model_8c_a0576b308b7a523481db25f3ca758ecef}{00004}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{model_8c_a0576b308b7a523481db25f3ca758ecef}{state\_init}}(\mbox{\hyperlink{struct_system_state}{SystemState}}*\ s)\ \{}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00005}00005\ \ \ memset(s,\ 0,\ \textcolor{keyword}{sizeof}(*s));}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00006}00006\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;i<\mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\_PROCS}};i++)\ s-\/>\mbox{\hyperlink{struct_system_state_a7c3b79c5422138c9e4876d4d96480b22}{pid\_to\_idx}}[i]\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00007}00007\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;i<\mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\_RES}};i++)\ s-\/>\mbox{\hyperlink{struct_system_state_afa41f5644db70544612ebbfccef75039}{rid\_to\_idx}}[i]\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00008}00008\ \}}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00010}\mbox{\hyperlink{model_8c_aa3c0059bcf7fe112ca3748600fb2981c}{00010}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{model_8c_aa3c0059bcf7fe112ca3748600fb2981c}{proc\_active}}(\mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ad}{ProcState}}\ st)\ \{}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00011}00011\ \ \ \textcolor{keywordflow}{return}\ st\ !=\ \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022adac4bd92270ab58449a1752f67ec9e7090}{PS\_FINISHED}}\ \&\&\ st\ !=\ \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ada6538f10c8cbb5dbd408a965b5548f739}{PS\_ABORTED}};}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00014}\mbox{\hyperlink{model_8c_a3e8829e3218c3aa91904341746b9ca25}{00014}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{model_8c_a3e8829e3218c3aa91904341746b9ca25}{ensure\_proc}}(\mbox{\hyperlink{struct_system_state}{SystemState}}*\ s,\ \textcolor{keywordtype}{int}\ pid)\ \{}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00015}00015\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;i<s-\/>\mbox{\hyperlink{struct_system_state_a59134b2862c41b90d5e181d8376096a6}{nprocs}};i++)\ \textcolor{keywordflow}{if}\ (s-\/>\mbox{\hyperlink{struct_system_state_a6d1e10221dc5454ab0d48d7e20443144}{procs}}[i].\mbox{\hyperlink{struct_process_a595b4f93d83869f5cc3681cfeebc5609}{pid}}\ ==\ pid)\ \textcolor{keywordflow}{return}\ i;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00016}00016\ \ \ \textcolor{keywordtype}{int}\ idx\ =\ s-\/>\mbox{\hyperlink{struct_system_state_a59134b2862c41b90d5e181d8376096a6}{nprocs}}++;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00017}00017\ \ \ s-\/>\mbox{\hyperlink{struct_system_state_a6d1e10221dc5454ab0d48d7e20443144}{procs}}[idx].\mbox{\hyperlink{struct_process_a595b4f93d83869f5cc3681cfeebc5609}{pid}}\ =\ pid;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00018}00018\ \ \ s-\/>\mbox{\hyperlink{struct_system_state_a6d1e10221dc5454ab0d48d7e20443144}{procs}}[idx].\mbox{\hyperlink{struct_process_a8f83d8067d6fc8e0d050b6d34009e349}{state}}\ =\ \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022adac47f7b586fa1283d87671f34b655fa7d}{PS\_NEW}};}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00019}00019\ \ \ s-\/>\mbox{\hyperlink{struct_system_state_a6d1e10221dc5454ab0d48d7e20443144}{procs}}[idx].\mbox{\hyperlink{struct_process_af87104e4190cb92aa510abc8647b318f}{priority}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00020}00020\ \ \ s-\/>\mbox{\hyperlink{struct_system_state_a6d1e10221dc5454ab0d48d7e20443144}{procs}}[idx].\mbox{\hyperlink{struct_process_a421fa1bc71f0044b034084a53ee51966}{progress}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00021}00021\ \ \ \textcolor{keywordflow}{return}\ idx;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00024}\mbox{\hyperlink{model_8c_aa33a951e7c1123436bc3b03254884e9a}{00024}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{model_8c_aa33a951e7c1123436bc3b03254884e9a}{ensure\_res}}(\mbox{\hyperlink{struct_system_state}{SystemState}}*\ s,\ \textcolor{keywordtype}{int}\ rid,\ \textcolor{keywordtype}{int}\ capacity)\ \{}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00025}00025\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;i<s-\/>\mbox{\hyperlink{struct_system_state_a6361b97373de6b68ba7f168210b329df}{nres}};i++)\ \textcolor{keywordflow}{if}\ (s-\/>\mbox{\hyperlink{struct_system_state_acedef04f9fc39afb4fe7ef5ac7ed936f}{res}}[i].\mbox{\hyperlink{struct_resource_a708b700b709fac049abf0461972fc75e}{rid}}\ ==\ rid)\ \textcolor{keywordflow}{return}\ i;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00026}00026\ \ \ \textcolor{keywordtype}{int}\ idx\ =\ s-\/>\mbox{\hyperlink{struct_system_state_a6361b97373de6b68ba7f168210b329df}{nres}}++;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00027}00027\ \ \ s-\/>\mbox{\hyperlink{struct_system_state_acedef04f9fc39afb4fe7ef5ac7ed936f}{res}}[idx].\mbox{\hyperlink{struct_resource_a708b700b709fac049abf0461972fc75e}{rid}}\ =\ rid;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00028}00028\ \ \ s-\/>\mbox{\hyperlink{struct_system_state_acedef04f9fc39afb4fe7ef5ac7ed936f}{res}}[idx].\mbox{\hyperlink{struct_resource_ad9f149ff9c7459fcf3ea9b176ea43a1a}{capacity}}\ =\ capacity;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00029}00029\ \ \ s-\/>\mbox{\hyperlink{struct_system_state_a5a61f0bad77afeae6ae485849ebdd1a6}{avail}}[idx]\ =\ capacity;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00030}00030\ \ \ \textcolor{keywordflow}{return}\ idx;}
+\DoxyCodeLine{\Hypertarget{model_8c_source_l00031}00031\ \}}
+
+\end{DoxyCode}

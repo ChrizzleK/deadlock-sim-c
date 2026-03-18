@@ -1,0 +1,207 @@
+\doxysection{src/core/model.h File Reference}
+\hypertarget{model_8h}{}\label{model_8h}\index{src/core/model.h@{src/core/model.h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for model.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{model_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_process}{Process}}
+\item 
+struct \mbox{\hyperlink{struct_resource}{Resource}}
+\item 
+struct \mbox{\hyperlink{struct_system_state}{System\+State}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}{MAX\+\_\+\+PROCS}}~128
+\item 
+\#define \mbox{\hyperlink{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}{MAX\+\_\+\+RES}}~64
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ad}{Proc\+State}} \{ \newline
+\mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022adac47f7b586fa1283d87671f34b655fa7d}{PS\+\_\+\+NEW}}
+, \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022adad704bca1f4a52c376b2fc453fe8ecc9a}{PS\+\_\+\+READY}}
+, \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ada0abc21448f7a1b6511a02a8f74baab74}{PS\+\_\+\+RUNNING}}
+, \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ada04c361142369a00a37063d0e983d1648}{PS\+\_\+\+BLOCKED}}
+, \newline
+\mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022adac4bd92270ab58449a1752f67ec9e7090}{PS\+\_\+\+FINISHED}}
+, \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ada6538f10c8cbb5dbd408a965b5548f739}{PS\+\_\+\+ABORTED}}
+, \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ada8bfc193a386b0d903d46d877986ac5f6}{PS\+\_\+\+ROLLED\+\_\+\+BACK}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{model_8h_a0576b308b7a523481db25f3ca758ecef}{state\+\_\+init}} (\mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}s)
+\item 
+int \mbox{\hyperlink{model_8h_a3e8829e3218c3aa91904341746b9ca25}{ensure\+\_\+proc}} (\mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}s, int pid)
+\item 
+int \mbox{\hyperlink{model_8h_aa33a951e7c1123436bc3b03254884e9a}{ensure\+\_\+res}} (\mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}s, int rid, int capacity)
+\item 
+int \mbox{\hyperlink{model_8h_aa3c0059bcf7fe112ca3748600fb2981c}{proc\+\_\+active}} (\mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ad}{Proc\+State}} st)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{model_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014}\index{model.h@{model.h}!MAX\_PROCS@{MAX\_PROCS}}
+\index{MAX\_PROCS@{MAX\_PROCS}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_PROCS}{MAX\_PROCS}}
+{\footnotesize\ttfamily \label{model_8h_a0e92bfcd9e51ca39bbebc3dfb9c16014} 
+\#define MAX\+\_\+\+PROCS~128}
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00004}{4}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+\Hypertarget{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6}\index{model.h@{model.h}!MAX\_RES@{MAX\_RES}}
+\index{MAX\_RES@{MAX\_RES}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_RES}{MAX\_RES}}
+{\footnotesize\ttfamily \label{model_8h_a8403745c23fd4c4c2408ad2f2fcfa5d6} 
+\#define MAX\+\_\+\+RES~64}
+
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00005}{5}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+
+\label{doc-enum-members}
+\Hypertarget{model_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{model_8h_a2cd36584fb8713253a7cccb671e022ad}\index{model.h@{model.h}!ProcState@{ProcState}}
+\index{ProcState@{ProcState}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{ProcState}{ProcState}}
+{\footnotesize\ttfamily \label{model_8h_a2cd36584fb8713253a7cccb671e022ad} 
+enum \mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ad}{Proc\+State}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PS\_NEW@{PS\_NEW}!model.h@{model.h}}\index{model.h@{model.h}!PS\_NEW@{PS\_NEW}}}\Hypertarget{model_8h_a2cd36584fb8713253a7cccb671e022adac47f7b586fa1283d87671f34b655fa7d}\label{model_8h_a2cd36584fb8713253a7cccb671e022adac47f7b586fa1283d87671f34b655fa7d} 
+PS\+\_\+\+NEW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PS\_READY@{PS\_READY}!model.h@{model.h}}\index{model.h@{model.h}!PS\_READY@{PS\_READY}}}\Hypertarget{model_8h_a2cd36584fb8713253a7cccb671e022adad704bca1f4a52c376b2fc453fe8ecc9a}\label{model_8h_a2cd36584fb8713253a7cccb671e022adad704bca1f4a52c376b2fc453fe8ecc9a} 
+PS\+\_\+\+READY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PS\_RUNNING@{PS\_RUNNING}!model.h@{model.h}}\index{model.h@{model.h}!PS\_RUNNING@{PS\_RUNNING}}}\Hypertarget{model_8h_a2cd36584fb8713253a7cccb671e022ada0abc21448f7a1b6511a02a8f74baab74}\label{model_8h_a2cd36584fb8713253a7cccb671e022ada0abc21448f7a1b6511a02a8f74baab74} 
+PS\+\_\+\+RUNNING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PS\_BLOCKED@{PS\_BLOCKED}!model.h@{model.h}}\index{model.h@{model.h}!PS\_BLOCKED@{PS\_BLOCKED}}}\Hypertarget{model_8h_a2cd36584fb8713253a7cccb671e022ada04c361142369a00a37063d0e983d1648}\label{model_8h_a2cd36584fb8713253a7cccb671e022ada04c361142369a00a37063d0e983d1648} 
+PS\+\_\+\+BLOCKED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PS\_FINISHED@{PS\_FINISHED}!model.h@{model.h}}\index{model.h@{model.h}!PS\_FINISHED@{PS\_FINISHED}}}\Hypertarget{model_8h_a2cd36584fb8713253a7cccb671e022adac4bd92270ab58449a1752f67ec9e7090}\label{model_8h_a2cd36584fb8713253a7cccb671e022adac4bd92270ab58449a1752f67ec9e7090} 
+PS\+\_\+\+FINISHED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PS\_ABORTED@{PS\_ABORTED}!model.h@{model.h}}\index{model.h@{model.h}!PS\_ABORTED@{PS\_ABORTED}}}\Hypertarget{model_8h_a2cd36584fb8713253a7cccb671e022ada6538f10c8cbb5dbd408a965b5548f739}\label{model_8h_a2cd36584fb8713253a7cccb671e022ada6538f10c8cbb5dbd408a965b5548f739} 
+PS\+\_\+\+ABORTED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PS\_ROLLED\_BACK@{PS\_ROLLED\_BACK}!model.h@{model.h}}\index{model.h@{model.h}!PS\_ROLLED\_BACK@{PS\_ROLLED\_BACK}}}\Hypertarget{model_8h_a2cd36584fb8713253a7cccb671e022ada8bfc193a386b0d903d46d877986ac5f6}\label{model_8h_a2cd36584fb8713253a7cccb671e022ada8bfc193a386b0d903d46d877986ac5f6} 
+PS\+\_\+\+ROLLED\+\_\+\+BACK&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{model_8h_source_l00007}{7}} of file \mbox{\hyperlink{model_8h_source}{model.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{model_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{model_8h_a3e8829e3218c3aa91904341746b9ca25}\index{model.h@{model.h}!ensure\_proc@{ensure\_proc}}
+\index{ensure\_proc@{ensure\_proc}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{ensure\_proc()}{ensure\_proc()}}
+{\footnotesize\ttfamily \label{model_8h_a3e8829e3218c3aa91904341746b9ca25} 
+int ensure\+\_\+proc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{pid}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{model_8c_source_l00014}{14}} of file \mbox{\hyperlink{model_8c_source}{model.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h_a3e8829e3218c3aa91904341746b9ca25_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{model_8h_aa33a951e7c1123436bc3b03254884e9a}\index{model.h@{model.h}!ensure\_res@{ensure\_res}}
+\index{ensure\_res@{ensure\_res}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{ensure\_res()}{ensure\_res()}}
+{\footnotesize\ttfamily \label{model_8h_aa33a951e7c1123436bc3b03254884e9a} 
+int ensure\+\_\+res (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{rid}{, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{model_8c_source_l00024}{24}} of file \mbox{\hyperlink{model_8c_source}{model.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{model_8h_aa33a951e7c1123436bc3b03254884e9a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{model_8h_aa3c0059bcf7fe112ca3748600fb2981c}\index{model.h@{model.h}!proc\_active@{proc\_active}}
+\index{proc\_active@{proc\_active}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{proc\_active()}{proc\_active()}}
+{\footnotesize\ttfamily \label{model_8h_aa3c0059bcf7fe112ca3748600fb2981c} 
+int proc\+\_\+active (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ad}{Proc\+State}}}]{st}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{model_8c_source_l00010}{10}} of file \mbox{\hyperlink{model_8c_source}{model.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h_aa3c0059bcf7fe112ca3748600fb2981c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{model_8h_a0576b308b7a523481db25f3ca758ecef}\index{model.h@{model.h}!state\_init@{state\_init}}
+\index{state\_init@{state\_init}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{state\_init()}{state\_init()}}
+{\footnotesize\ttfamily \label{model_8h_a0576b308b7a523481db25f3ca758ecef} 
+void state\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{model_8c_source_l00004}{4}} of file \mbox{\hyperlink{model_8c_source}{model.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{model_8h_a0576b308b7a523481db25f3ca758ecef_icgraph}
+\end{center}
+\end{figure}
