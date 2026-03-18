@@ -1,0 +1,9 @@
+<map id="detector_wfg" name="detector_wfg">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,100,56"/>
+<area shape="rect" id="Node000002" href="$detector__matrix_8c.html#a799885c5715d470f18a66e692715652f" title=" " alt="" coords="148,31,237,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,41,132,41,132,46,100,46"/>
+<area shape="rect" id="Node000003" href="$detector__matrix_8c.html#ae49622d22688d2b6f7c80d47f0b0f485" title=" " alt="" coords="291,5,366,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="237,32,275,25,276,30,238,38"/>
+<area shape="rect" id="Node000004" href="$model_8c.html#aa3c0059bcf7fe112ca3748600fb2981c" title=" " alt="" coords="285,55,372,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="238,49,270,54,270,60,237,54"/>
+</map>

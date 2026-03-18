@@ -1,0 +1,7 @@
+<map id="SystemState" name="SystemState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="47,201,138,427"/>
+<area shape="rect" id="Node000002" href="$struct_process.html" title=" " alt="" coords="5,5,81,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,130,67,177,69,184,64,185,62,178,53,131"/>
+<area shape="rect" id="Node000003" href="$struct_resource.html" title=" " alt="" coords="106,25,181,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="137,111,122,185,117,184,132,110"/>
+</map>

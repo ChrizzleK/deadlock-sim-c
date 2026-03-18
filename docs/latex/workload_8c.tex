@@ -1,0 +1,91 @@
+\doxysection{src/core/workload.c File Reference}
+\hypertarget{workload_8c}{}\label{workload_8c}\index{src/core/workload.c@{src/core/workload.c}}
+{\ttfamily \#include "{}src/core/workload.\+h"{}}\newline
+{\ttfamily \#include "{}src/core/util.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for workload.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{workload_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{workload_8c_a96961176aa28bd6076ab6a68d274b952}{event\+\_\+type\+\_\+name}} (\mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{Event\+Type}} t)
+\item 
+int \mbox{\hyperlink{workload_8c_a080aac891486fed820877bbc65e14677}{parse\+\_\+event\+\_\+type}} (const char \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{Event\+Type}} \texorpdfstring{$\ast$}{*}out)
+\item 
+\mbox{\hyperlink{struct_event_list}{Event\+List}} \mbox{\hyperlink{workload_8c_ae8940714faba6c453d0579d283ad9b2b}{load\+\_\+workload\+\_\+csv}} (const char \texorpdfstring{$\ast$}{*}path)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{workload_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{workload_8c_a96961176aa28bd6076ab6a68d274b952}\index{workload.c@{workload.c}!event\_type\_name@{event\_type\_name}}
+\index{event\_type\_name@{event\_type\_name}!workload.c@{workload.c}}
+\doxysubsubsection{\texorpdfstring{event\_type\_name()}{event\_type\_name()}}
+{\footnotesize\ttfamily \label{workload_8c_a96961176aa28bd6076ab6a68d274b952} 
+const char \texorpdfstring{$\ast$}{*} event\+\_\+type\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{Event\+Type}}}]{t}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{workload_8c_source_l00007}{7}} of file \mbox{\hyperlink{workload_8c_source}{workload.\+c}}.
+
+\Hypertarget{workload_8c_ae8940714faba6c453d0579d283ad9b2b}\index{workload.c@{workload.c}!load\_workload\_csv@{load\_workload\_csv}}
+\index{load\_workload\_csv@{load\_workload\_csv}!workload.c@{workload.c}}
+\doxysubsubsection{\texorpdfstring{load\_workload\_csv()}{load\_workload\_csv()}}
+{\footnotesize\ttfamily \label{workload_8c_ae8940714faba6c453d0579d283ad9b2b} 
+\mbox{\hyperlink{struct_event_list}{Event\+List}} load\+\_\+workload\+\_\+csv (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{workload_8c_source_l00027}{27}} of file \mbox{\hyperlink{workload_8c_source}{workload.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{workload_8c_ae8940714faba6c453d0579d283ad9b2b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{workload_8c_ae8940714faba6c453d0579d283ad9b2b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{workload_8c_a080aac891486fed820877bbc65e14677}\index{workload.c@{workload.c}!parse\_event\_type@{parse\_event\_type}}
+\index{parse\_event\_type@{parse\_event\_type}!workload.c@{workload.c}}
+\doxysubsubsection{\texorpdfstring{parse\_event\_type()}{parse\_event\_type()}}
+{\footnotesize\ttfamily \label{workload_8c_a080aac891486fed820877bbc65e14677} 
+int parse\+\_\+event\+\_\+type (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{\mbox{\hyperlink{workload_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{Event\+Type}} \texorpdfstring{$\ast$}{*}}]{out}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{workload_8c_source_l00018}{18}} of file \mbox{\hyperlink{workload_8c_source}{workload.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{workload_8c_a080aac891486fed820877bbc65e14677_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{workload_8c_a080aac891486fed820877bbc65e14677_icgraph}
+\end{center}
+\end{figure}

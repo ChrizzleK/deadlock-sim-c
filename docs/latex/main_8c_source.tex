@@ -1,0 +1,70 @@
+\doxysection{main.\+c}
+\hypertarget{main_8c_source}{}\label{main_8c_source}\index{src/main.c@{src/main.c}}
+\mbox{\hyperlink{main_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{engine_8h}{core/engine.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{workload_8h}{core/workload.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{detector__wfg_8h}{policies/detector\_wfg.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{detector__matrix_8h}{policies/detector\_matrix.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resolver__abort_8h}{policies/resolver\_abort.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resolver__rollback_8h}{policies/resolver\_rollback.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{prevention__banker_8h}{policies/prevention\_banker.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{avoidance__nohold_8h}{policies/avoidance\_nohold.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{avoidance__ordering_8h}{policies/avoidance\_ordering.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{avoidance__preempt_8h}{policies/avoidance\_preempt.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00015}\mbox{\hyperlink{main_8c_ab064df9f350a7a7ddc326df61a66c95b}{00015}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{main_8c_ab064df9f350a7a7ddc326df61a66c95b}{argval}}(\textcolor{keywordtype}{int}*\ i,\ \textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00016}00016\ \ \ \textcolor{keywordflow}{if}\ (*i\ +\ 1\ >=\ argc)\ \{\ fprintf(stderr,\textcolor{stringliteral}{"{}missing\ value\(\backslash\)n"{}});\ exit(1);\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00017}00017\ \ \ (*i)++;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00018}00018\ \ \ \textcolor{keywordflow}{return}\ argv[*i];}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}\mbox{\hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{00021}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}**\ argv)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00022}00022\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ workload\ =\ \textcolor{stringliteral}{"{}workloads/demo.csv"{}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00023}00023\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ mode\ =\ \textcolor{stringliteral}{"{}detect\_abort"{}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00024}00024\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ detector\ =\ \textcolor{stringliteral}{"{}matrix"{}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00026}00026\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=1;i<argc;i++)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (!strcmp(argv[i],\textcolor{stringliteral}{"{}-\/-\/workload"{}}))\ workload\ =\ \mbox{\hyperlink{main_8c_ab064df9f350a7a7ddc326df61a66c95b}{argval}}(\&i,argc,argv);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!strcmp(argv[i],\textcolor{stringliteral}{"{}-\/-\/mode"{}}))\ mode\ =\ \mbox{\hyperlink{main_8c_ab064df9f350a7a7ddc326df61a66c95b}{argval}}(\&i,argc,argv);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!strcmp(argv[i],\textcolor{stringliteral}{"{}-\/-\/detector"{}}))\ detector\ =\ \mbox{\hyperlink{main_8c_ab064df9f350a7a7ddc326df61a66c95b}{argval}}(\&i,argc,argv);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00030}00030\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00032}00032\ \ \ \mbox{\hyperlink{struct_engine}{Engine}}\ e;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00033}00033\ \ \ \mbox{\hyperlink{engine_8c_aef169f1c7e0a9d656c8c992b2de79c62}{engine\_init}}(\&e);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00035}00035\ \ \ \textcolor{keywordflow}{if}\ (!strcmp(detector,\textcolor{stringliteral}{"{}wfg"{}}))\ \mbox{\hyperlink{engine_8c_a81444ebf5d349b39f11ff6bde3c1a5c2}{engine\_set\_detector}}(\&e,\ \mbox{\hyperlink{detector__wfg_8c_a8237d33d78b8a2741ffa4937e48185e6}{detector\_wfg}}());}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00036}00036\ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{engine_8c_a81444ebf5d349b39f11ff6bde3c1a5c2}{engine\_set\_detector}}(\&e,\ \mbox{\hyperlink{detector__matrix_8c_a27be77df0494a73757489571afd186c6}{detector\_matrix}}());}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00038}00038\ \ \ \textcolor{keywordflow}{if}\ (!strcmp(mode,\textcolor{stringliteral}{"{}detect\_abort"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{engine_8c_afa23042b31688798272da15fb8362d20}{engine\_set\_resolver}}(\&e,\ \mbox{\hyperlink{resolver__abort_8c_a6905da1484c0d2ff4f64e0a50fbec21e}{resolver\_abort}}());}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00040}00040\ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!strcmp(mode,\textcolor{stringliteral}{"{}detect\_rollback"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{engine_8c_afa23042b31688798272da15fb8362d20}{engine\_set\_resolver}}(\&e,\ \mbox{\hyperlink{resolver__rollback_8c_a67a43d286465df8acf04494205b57db5}{resolver\_rollback}}());}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00042}00042\ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!strcmp(mode,\textcolor{stringliteral}{"{}banker"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{engine_8c_a8d8b9cfc533e2d6930472a6f13bc9138}{engine\_set\_policy}}(\&e,\ \mbox{\hyperlink{prevention__banker_8c_a0ee4f791cdb037548f2cf33a793fb6de}{policy\_banker}}());}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00044}00044\ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!strcmp(mode,\textcolor{stringliteral}{"{}avoid\_nohold"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{engine_8c_a8d8b9cfc533e2d6930472a6f13bc9138}{engine\_set\_policy}}(\&e,\ \mbox{\hyperlink{avoidance__nohold_8c_a10104c43ec76e2e1094e1168e2bc3a09}{policy\_avoid\_nohold}}());}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00046}00046\ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!strcmp(mode,\textcolor{stringliteral}{"{}avoid\_order"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{engine_8c_a8d8b9cfc533e2d6930472a6f13bc9138}{engine\_set\_policy}}(\&e,\ \mbox{\hyperlink{avoidance__ordering_8c_ae9cd6ecb253a191ea203d1c443042ba3}{policy\_avoid\_ordering}}());}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00048}00048\ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!strcmp(mode,\textcolor{stringliteral}{"{}avoid\_preempt"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{engine_8c_a8d8b9cfc533e2d6930472a6f13bc9138}{engine\_set\_policy}}(\&e,\ \mbox{\hyperlink{avoidance__preempt_8c_a797f2962fa85e122ebb2994084a08476}{policy\_avoid\_preempt}}());}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00050}00050\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00051}00051\ \ \ \ \ fprintf(stderr,\textcolor{stringliteral}{"{}unknown\ mode\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00053}00053\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00055}00055\ \ \ \mbox{\hyperlink{struct_event_list}{EventList}}\ list\ =\ \mbox{\hyperlink{workload_8c_ae8940714faba6c453d0579d283ad9b2b}{load\_workload\_csv}}(workload);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00056}00056\ \ \ \mbox{\hyperlink{engine_8c_a07303577794ddbc341a62c34c3246648}{engine\_load\_events}}(\&e,\ \&list);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00057}00057\ \ \ \mbox{\hyperlink{engine_8c_a5215321b2359f517366504415e0001fc}{engine\_run}}(\&e,\ 100000);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00059}00059\ \ \ printf(\textcolor{stringliteral}{"{}deadlocks=\%d\ aborts=\%d\ rollbacks=\%d\ grants=\%d\ denies=\%d\ defers=\%d\(\backslash\)n"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00060}00060\ \ \ \ \ e.\mbox{\hyperlink{struct_engine_ab6f2831f6ea9c3b0d811914f8de4fd19}{m}}.\mbox{\hyperlink{struct_metrics_afd805faff003101fc1137d72b43f2276}{deadlocks\_detected}},\ e.\mbox{\hyperlink{struct_engine_ab6f2831f6ea9c3b0d811914f8de4fd19}{m}}.\mbox{\hyperlink{struct_metrics_a711d6e4deb668d58c63c14c5b5de2843}{aborts}},\ e.\mbox{\hyperlink{struct_engine_ab6f2831f6ea9c3b0d811914f8de4fd19}{m}}.\mbox{\hyperlink{struct_metrics_aab0fb07e4e61274c4d2bd8c691903f0b}{rollbacks}},\ e.\mbox{\hyperlink{struct_engine_ab6f2831f6ea9c3b0d811914f8de4fd19}{m}}.\mbox{\hyperlink{struct_metrics_aa105b075d5b5f6898ce5e75c51b0d49e}{grants}},\ e.\mbox{\hyperlink{struct_engine_ab6f2831f6ea9c3b0d811914f8de4fd19}{m}}.\mbox{\hyperlink{struct_metrics_a07bbb2f16a9c71ccf6e240562f73881a}{denies}},\ e.\mbox{\hyperlink{struct_engine_ab6f2831f6ea9c3b0d811914f8de4fd19}{m}}.\mbox{\hyperlink{struct_metrics_a36150bffc841931648b59cfb3e7bee80}{defers}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00062}00062\ \ \ free(list.\mbox{\hyperlink{struct_event_list_accd03140cfb254bec756916d4eec5c3d}{items}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00063}00063\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00064}00064\ \}}
+
+\end{DoxyCode}

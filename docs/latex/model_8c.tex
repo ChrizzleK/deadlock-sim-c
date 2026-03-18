@@ -1,0 +1,100 @@
+\doxysection{src/core/model.c File Reference}
+\hypertarget{model_8c}{}\label{model_8c}\index{src/core/model.c@{src/core/model.c}}
+{\ttfamily \#include "{}src/core/model.\+h"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for model.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{model_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{model_8c_a0576b308b7a523481db25f3ca758ecef}{state\+\_\+init}} (\mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}s)
+\item 
+int \mbox{\hyperlink{model_8c_aa3c0059bcf7fe112ca3748600fb2981c}{proc\+\_\+active}} (\mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ad}{Proc\+State}} st)
+\item 
+int \mbox{\hyperlink{model_8c_a3e8829e3218c3aa91904341746b9ca25}{ensure\+\_\+proc}} (\mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}s, int pid)
+\item 
+int \mbox{\hyperlink{model_8c_aa33a951e7c1123436bc3b03254884e9a}{ensure\+\_\+res}} (\mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}s, int rid, int capacity)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{model_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{model_8c_a3e8829e3218c3aa91904341746b9ca25}\index{model.c@{model.c}!ensure\_proc@{ensure\_proc}}
+\index{ensure\_proc@{ensure\_proc}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{ensure\_proc()}{ensure\_proc()}}
+{\footnotesize\ttfamily \label{model_8c_a3e8829e3218c3aa91904341746b9ca25} 
+int ensure\+\_\+proc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{pid}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{model_8c_source_l00014}{14}} of file \mbox{\hyperlink{model_8c_source}{model.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8c_a3e8829e3218c3aa91904341746b9ca25_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{model_8c_aa33a951e7c1123436bc3b03254884e9a}\index{model.c@{model.c}!ensure\_res@{ensure\_res}}
+\index{ensure\_res@{ensure\_res}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{ensure\_res()}{ensure\_res()}}
+{\footnotesize\ttfamily \label{model_8c_aa33a951e7c1123436bc3b03254884e9a} 
+int ensure\+\_\+res (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{rid}{, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{model_8c_source_l00024}{24}} of file \mbox{\hyperlink{model_8c_source}{model.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{model_8c_aa33a951e7c1123436bc3b03254884e9a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{model_8c_aa3c0059bcf7fe112ca3748600fb2981c}\index{model.c@{model.c}!proc\_active@{proc\_active}}
+\index{proc\_active@{proc\_active}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{proc\_active()}{proc\_active()}}
+{\footnotesize\ttfamily \label{model_8c_aa3c0059bcf7fe112ca3748600fb2981c} 
+int proc\+\_\+active (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{model_8h_a2cd36584fb8713253a7cccb671e022ad}{Proc\+State}}}]{st}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{model_8c_source_l00010}{10}} of file \mbox{\hyperlink{model_8c_source}{model.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8c_aa3c0059bcf7fe112ca3748600fb2981c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{model_8c_a0576b308b7a523481db25f3ca758ecef}\index{model.c@{model.c}!state\_init@{state\_init}}
+\index{state\_init@{state\_init}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{state\_init()}{state\_init()}}
+{\footnotesize\ttfamily \label{model_8c_a0576b308b7a523481db25f3ca758ecef} 
+void state\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{model_8c_source_l00004}{4}} of file \mbox{\hyperlink{model_8c_source}{model.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{model_8c_a0576b308b7a523481db25f3ca758ecef_icgraph}
+\end{center}
+\end{figure}

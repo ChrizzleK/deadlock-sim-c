@@ -1,5 +1,5 @@
-#include "core/workload.h"
-#include "core/util.h"
+#include "src/core/workload.h"
+#include "src/core/util.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

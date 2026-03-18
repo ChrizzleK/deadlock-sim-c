@@ -1,0 +1,96 @@
+\doxysection{src/policies/prevention\+\_\+banker.c File Reference}
+\hypertarget{prevention__banker_8c}{}\label{prevention__banker_8c}\index{src/policies/prevention\_banker.c@{src/policies/prevention\_banker.c}}
+{\ttfamily \#include "{}src/policies/prevention\+\_\+banker.\+h"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for prevention\+\_\+banker.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{prevention__banker_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{prevention__banker_8c_ad2516128d8915902d8b7d277b82c6c3d}{safety\+\_\+check}} (const \mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}s)
+\item 
+static \mbox{\hyperlink{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9c}{Decision}} \mbox{\hyperlink{prevention__banker_8c_a1e3f8cc04fcb24aec1fdb423a9e1ad2d}{on\+\_\+request\+\_\+impl}} (const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}e, \mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{struct_metrics}{Metrics}} \texorpdfstring{$\ast$}{*}m)
+\item 
+\mbox{\hyperlink{struct_request_policy}{Request\+Policy}} \mbox{\hyperlink{prevention__banker_8c_a0ee4f791cdb037548f2cf33a793fb6de}{policy\+\_\+banker}} (void)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{prevention__banker_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{prevention__banker_8c_a1e3f8cc04fcb24aec1fdb423a9e1ad2d}\index{prevention\_banker.c@{prevention\_banker.c}!on\_request\_impl@{on\_request\_impl}}
+\index{on\_request\_impl@{on\_request\_impl}!prevention\_banker.c@{prevention\_banker.c}}
+\doxysubsubsection{\texorpdfstring{on\_request\_impl()}{on\_request\_impl()}}
+{\footnotesize\ttfamily \label{prevention__banker_8c_a1e3f8cc04fcb24aec1fdb423a9e1ad2d} 
+\mbox{\hyperlink{policy_8h_a45e4fd10ecc28edb6f4e3084b50ccb9c}{Decision}} on\+\_\+request\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_event}{Event}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{\mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{\mbox{\hyperlink{struct_metrics}{Metrics}} \texorpdfstring{$\ast$}{*}}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{prevention__banker_8c_source_l00034}{34}} of file \mbox{\hyperlink{prevention__banker_8c_source}{prevention\+\_\+banker.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{prevention__banker_8c_a1e3f8cc04fcb24aec1fdb423a9e1ad2d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{prevention__banker_8c_a0ee4f791cdb037548f2cf33a793fb6de}\index{prevention\_banker.c@{prevention\_banker.c}!policy\_banker@{policy\_banker}}
+\index{policy\_banker@{policy\_banker}!prevention\_banker.c@{prevention\_banker.c}}
+\doxysubsubsection{\texorpdfstring{policy\_banker()}{policy\_banker()}}
+{\footnotesize\ttfamily \label{prevention__banker_8c_a0ee4f791cdb037548f2cf33a793fb6de} 
+\mbox{\hyperlink{struct_request_policy}{Request\+Policy}} policy\+\_\+banker (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{prevention__banker_8c_source_l00059}{59}} of file \mbox{\hyperlink{prevention__banker_8c_source}{prevention\+\_\+banker.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{prevention__banker_8c_a0ee4f791cdb037548f2cf33a793fb6de_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{prevention__banker_8c_a0ee4f791cdb037548f2cf33a793fb6de_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{prevention__banker_8c_ad2516128d8915902d8b7d277b82c6c3d}\index{prevention\_banker.c@{prevention\_banker.c}!safety\_check@{safety\_check}}
+\index{safety\_check@{safety\_check}!prevention\_banker.c@{prevention\_banker.c}}
+\doxysubsubsection{\texorpdfstring{safety\_check()}{safety\_check()}}
+{\footnotesize\ttfamily \label{prevention__banker_8c_ad2516128d8915902d8b7d277b82c6c3d} 
+int safety\+\_\+check (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_system_state}{System\+State}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{prevention__banker_8c_source_l00004}{4}} of file \mbox{\hyperlink{prevention__banker_8c_source}{prevention\+\_\+banker.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{prevention__banker_8c_ad2516128d8915902d8b7d277b82c6c3d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{prevention__banker_8c_ad2516128d8915902d8b7d277b82c6c3d_icgraph}
+\end{center}
+\end{figure}

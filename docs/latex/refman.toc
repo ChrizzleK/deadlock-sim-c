@@ -1,0 +1,248 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Deadlock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Set Struct Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Member Data Documentation}{5}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}len}{5}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}pids}{6}{subsubsection.3.1.2.2}%
+\contentsline {section}{\numberline {3.2}Detector Struct Reference}{6}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{6}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Member Data Documentation}{6}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}detect}{6}{subsubsection.3.2.2.1}%
+\contentsline {section}{\numberline {3.3}Engine Struct Reference}{7}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{7}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Member Data Documentation}{8}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}check\_interval}{8}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}det}{8}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}m}{8}{subsubsection.3.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.3.2.4}pol}{8}{subsubsection.3.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.3.2.5}q}{8}{subsubsection.3.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.3.2.6}qcap}{8}{subsubsection.3.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.3.2.7}qlen}{8}{subsubsection.3.3.2.7}%
+\contentsline {subsubsection}{\numberline {3.3.2.8}res}{9}{subsubsection.3.3.2.8}%
+\contentsline {subsubsection}{\numberline {3.3.2.9}s}{9}{subsubsection.3.3.2.9}%
+\contentsline {section}{\numberline {3.4}Event Struct Reference}{9}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Detailed Description}{10}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Member Data Documentation}{10}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}amount}{10}{subsubsection.3.4.2.1}%
+\contentsline {subsubsection}{\numberline {3.4.2.2}hold}{10}{subsubsection.3.4.2.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.3}pid}{10}{subsubsection.3.4.2.3}%
+\contentsline {subsubsection}{\numberline {3.4.2.4}rid}{10}{subsubsection.3.4.2.4}%
+\contentsline {subsubsection}{\numberline {3.4.2.5}seq}{10}{subsubsection.3.4.2.5}%
+\contentsline {subsubsection}{\numberline {3.4.2.6}time}{10}{subsubsection.3.4.2.6}%
+\contentsline {subsubsection}{\numberline {3.4.2.7}type}{11}{subsubsection.3.4.2.7}%
+\contentsline {section}{\numberline {3.5}Event\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List Struct Reference}{11}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{11}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Member Data Documentation}{12}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}items}{12}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}len}{12}{subsubsection.3.5.2.2}%
+\contentsline {section}{\numberline {3.6}Metrics Struct Reference}{12}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Detailed Description}{13}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Member Data Documentation}{13}{subsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.1}aborts}{13}{subsubsection.3.6.2.1}%
+\contentsline {subsubsection}{\numberline {3.6.2.2}deadlocks\_detected}{13}{subsubsection.3.6.2.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.3}defers}{13}{subsubsection.3.6.2.3}%
+\contentsline {subsubsection}{\numberline {3.6.2.4}denies}{13}{subsubsection.3.6.2.4}%
+\contentsline {subsubsection}{\numberline {3.6.2.5}grants}{13}{subsubsection.3.6.2.5}%
+\contentsline {subsubsection}{\numberline {3.6.2.6}rollbacks}{13}{subsubsection.3.6.2.6}%
+\contentsline {section}{\numberline {3.7}Process Struct Reference}{14}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Detailed Description}{14}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Member Data Documentation}{14}{subsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.2.1}pid}{14}{subsubsection.3.7.2.1}%
+\contentsline {subsubsection}{\numberline {3.7.2.2}priority}{14}{subsubsection.3.7.2.2}%
+\contentsline {subsubsection}{\numberline {3.7.2.3}progress}{15}{subsubsection.3.7.2.3}%
+\contentsline {subsubsection}{\numberline {3.7.2.4}state}{15}{subsubsection.3.7.2.4}%
+\contentsline {section}{\numberline {3.8}Request\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Policy Struct Reference}{15}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Detailed Description}{15}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Member Data Documentation}{16}{subsection.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.2.1}on\_request}{16}{subsubsection.3.8.2.1}%
+\contentsline {section}{\numberline {3.9}Resolver Struct Reference}{16}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{16}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}Member Data Documentation}{16}{subsection.3.9.2}%
+\contentsline {subsubsection}{\numberline {3.9.2.1}resolve}{16}{subsubsection.3.9.2.1}%
+\contentsline {section}{\numberline {3.10}Resource Struct Reference}{17}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{17}{subsection.3.10.1}%
+\contentsline {subsection}{\numberline {3.10.2}Member Data Documentation}{17}{subsection.3.10.2}%
+\contentsline {subsubsection}{\numberline {3.10.2.1}capacity}{17}{subsubsection.3.10.2.1}%
+\contentsline {subsubsection}{\numberline {3.10.2.2}rid}{17}{subsubsection.3.10.2.2}%
+\contentsline {section}{\numberline {3.11}System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State Struct Reference}{18}{section.3.11}%
+\contentsline {subsection}{\numberline {3.11.1}Detailed Description}{19}{subsection.3.11.1}%
+\contentsline {subsection}{\numberline {3.11.2}Member Data Documentation}{19}{subsection.3.11.2}%
+\contentsline {subsubsection}{\numberline {3.11.2.1}alloc}{19}{subsubsection.3.11.2.1}%
+\contentsline {subsubsection}{\numberline {3.11.2.2}avail}{19}{subsubsection.3.11.2.2}%
+\contentsline {subsubsection}{\numberline {3.11.2.3}maxc}{19}{subsubsection.3.11.2.3}%
+\contentsline {subsubsection}{\numberline {3.11.2.4}nprocs}{19}{subsubsection.3.11.2.4}%
+\contentsline {subsubsection}{\numberline {3.11.2.5}nres}{19}{subsubsection.3.11.2.5}%
+\contentsline {subsubsection}{\numberline {3.11.2.6}pid\_to\_idx}{19}{subsubsection.3.11.2.6}%
+\contentsline {subsubsection}{\numberline {3.11.2.7}procs}{20}{subsubsection.3.11.2.7}%
+\contentsline {subsubsection}{\numberline {3.11.2.8}req}{20}{subsubsection.3.11.2.8}%
+\contentsline {subsubsection}{\numberline {3.11.2.9}res}{20}{subsubsection.3.11.2.9}%
+\contentsline {subsubsection}{\numberline {3.11.2.10}rid\_to\_idx}{20}{subsubsection.3.11.2.10}%
+\contentsline {subsubsection}{\numberline {3.11.2.11}time}{20}{subsubsection.3.11.2.11}%
+\contentsline {chapter}{\numberline {4}File Documentation}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}src/core/engine.c File Reference}{21}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Function Documentation}{22}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}cmp\_ev()}{22}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}do\_deadlock\_check()}{22}{subsubsection.4.1.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.1.3}engine\_add\_event()}{23}{subsubsection.4.1.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.1.4}engine\_init()}{23}{subsubsection.4.1.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.1.5}engine\_load\_events()}{24}{subsubsection.4.1.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.1.6}engine\_run()}{24}{subsubsection.4.1.1.6}%
+\contentsline {subsubsection}{\numberline {4.1.1.7}engine\_set\_detector()}{25}{subsubsection.4.1.1.7}%
+\contentsline {subsubsection}{\numberline {4.1.1.8}engine\_set\_policy()}{26}{subsubsection.4.1.1.8}%
+\contentsline {subsubsection}{\numberline {4.1.1.9}engine\_set\_resolver()}{26}{subsubsection.4.1.1.9}%
+\contentsline {subsubsection}{\numberline {4.1.1.10}handle\_arrive()}{27}{subsubsection.4.1.1.10}%
+\contentsline {subsubsection}{\numberline {4.1.1.11}handle\_finish()}{27}{subsubsection.4.1.1.11}%
+\contentsline {subsubsection}{\numberline {4.1.1.12}handle\_rel()}{28}{subsubsection.4.1.1.12}%
+\contentsline {subsubsection}{\numberline {4.1.1.13}handle\_req()}{28}{subsubsection.4.1.1.13}%
+\contentsline {subsubsection}{\numberline {4.1.1.14}sort\_queue()}{29}{subsubsection.4.1.1.14}%
+\contentsline {subsubsection}{\numberline {4.1.1.15}try\_unblock()}{29}{subsubsection.4.1.1.15}%
+\contentsline {section}{\numberline {4.2}engine.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{30}{section.4.2}%
+\contentsline {section}{\numberline {4.3}src/core/engine.h File Reference}{32}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Function Documentation}{33}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}engine\_add\_event()}{33}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}engine\_init()}{33}{subsubsection.4.3.1.2}%
+\contentsline {subsubsection}{\numberline {4.3.1.3}engine\_load\_events()}{34}{subsubsection.4.3.1.3}%
+\contentsline {subsubsection}{\numberline {4.3.1.4}engine\_run()}{34}{subsubsection.4.3.1.4}%
+\contentsline {subsubsection}{\numberline {4.3.1.5}engine\_set\_detector()}{35}{subsubsection.4.3.1.5}%
+\contentsline {subsubsection}{\numberline {4.3.1.6}engine\_set\_policy()}{36}{subsubsection.4.3.1.6}%
+\contentsline {subsubsection}{\numberline {4.3.1.7}engine\_set\_resolver()}{36}{subsubsection.4.3.1.7}%
+\contentsline {section}{\numberline {4.4}engine.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{37}{section.4.4}%
+\contentsline {section}{\numberline {4.5}src/core/metrics.c File Reference}{37}{section.4.5}%
+\contentsline {section}{\numberline {4.6}metrics.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{37}{section.4.6}%
+\contentsline {section}{\numberline {4.7}src/core/metrics.h File Reference}{38}{section.4.7}%
+\contentsline {section}{\numberline {4.8}metrics.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{38}{section.4.8}%
+\contentsline {section}{\numberline {4.9}src/core/model.c File Reference}{39}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Function Documentation}{39}{subsection.4.9.1}%
+\contentsline {subsubsection}{\numberline {4.9.1.1}ensure\_proc()}{39}{subsubsection.4.9.1.1}%
+\contentsline {subsubsection}{\numberline {4.9.1.2}ensure\_res()}{40}{subsubsection.4.9.1.2}%
+\contentsline {subsubsection}{\numberline {4.9.1.3}proc\_active()}{40}{subsubsection.4.9.1.3}%
+\contentsline {subsubsection}{\numberline {4.9.1.4}state\_init()}{41}{subsubsection.4.9.1.4}%
+\contentsline {section}{\numberline {4.10}model.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{41}{section.4.10}%
+\contentsline {section}{\numberline {4.11}src/core/model.h File Reference}{42}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Macro Definition Documentation}{43}{subsection.4.11.1}%
+\contentsline {subsubsection}{\numberline {4.11.1.1}MAX\_PROCS}{43}{subsubsection.4.11.1.1}%
+\contentsline {subsubsection}{\numberline {4.11.1.2}MAX\_RES}{43}{subsubsection.4.11.1.2}%
+\contentsline {subsection}{\numberline {4.11.2}Enumeration Type Documentation}{43}{subsection.4.11.2}%
+\contentsline {subsubsection}{\numberline {4.11.2.1}ProcState}{43}{subsubsection.4.11.2.1}%
+\contentsline {subsection}{\numberline {4.11.3}Function Documentation}{43}{subsection.4.11.3}%
+\contentsline {subsubsection}{\numberline {4.11.3.1}ensure\_proc()}{43}{subsubsection.4.11.3.1}%
+\contentsline {subsubsection}{\numberline {4.11.3.2}ensure\_res()}{44}{subsubsection.4.11.3.2}%
+\contentsline {subsubsection}{\numberline {4.11.3.3}proc\_active()}{44}{subsubsection.4.11.3.3}%
+\contentsline {subsubsection}{\numberline {4.11.3.4}state\_init()}{45}{subsubsection.4.11.3.4}%
+\contentsline {section}{\numberline {4.12}model.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{45}{section.4.12}%
+\contentsline {section}{\numberline {4.13}src/core/util.c File Reference}{46}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Function Documentation}{46}{subsection.4.13.1}%
+\contentsline {subsubsection}{\numberline {4.13.1.1}split\_csv()}{46}{subsubsection.4.13.1.1}%
+\contentsline {subsubsection}{\numberline {4.13.1.2}str\_eq()}{47}{subsubsection.4.13.1.2}%
+\contentsline {subsubsection}{\numberline {4.13.1.3}to\_int()}{47}{subsubsection.4.13.1.3}%
+\contentsline {subsubsection}{\numberline {4.13.1.4}trim()}{48}{subsubsection.4.13.1.4}%
+\contentsline {section}{\numberline {4.14}util.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{48}{section.4.14}%
+\contentsline {section}{\numberline {4.15}src/core/util.h File Reference}{49}{section.4.15}%
+\contentsline {subsection}{\numberline {4.15.1}Function Documentation}{49}{subsection.4.15.1}%
+\contentsline {subsubsection}{\numberline {4.15.1.1}split\_csv()}{49}{subsubsection.4.15.1.1}%
+\contentsline {subsubsection}{\numberline {4.15.1.2}str\_eq()}{50}{subsubsection.4.15.1.2}%
+\contentsline {subsubsection}{\numberline {4.15.1.3}to\_int()}{50}{subsubsection.4.15.1.3}%
+\contentsline {section}{\numberline {4.16}util.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{51}{section.4.16}%
+\contentsline {section}{\numberline {4.17}src/core/workload.c File Reference}{51}{section.4.17}%
+\contentsline {subsection}{\numberline {4.17.1}Function Documentation}{52}{subsection.4.17.1}%
+\contentsline {subsubsection}{\numberline {4.17.1.1}event\_type\_name()}{52}{subsubsection.4.17.1.1}%
+\contentsline {subsubsection}{\numberline {4.17.1.2}load\_workload\_csv()}{52}{subsubsection.4.17.1.2}%
+\contentsline {subsubsection}{\numberline {4.17.1.3}parse\_event\_type()}{53}{subsubsection.4.17.1.3}%
+\contentsline {section}{\numberline {4.18}workload.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{53}{section.4.18}%
+\contentsline {section}{\numberline {4.19}src/core/workload.h File Reference}{54}{section.4.19}%
+\contentsline {subsection}{\numberline {4.19.1}Enumeration Type Documentation}{55}{subsection.4.19.1}%
+\contentsline {subsubsection}{\numberline {4.19.1.1}EventType}{55}{subsubsection.4.19.1.1}%
+\contentsline {subsection}{\numberline {4.19.2}Function Documentation}{55}{subsection.4.19.2}%
+\contentsline {subsubsection}{\numberline {4.19.2.1}event\_type\_name()}{55}{subsubsection.4.19.2.1}%
+\contentsline {subsubsection}{\numberline {4.19.2.2}load\_workload\_csv()}{56}{subsubsection.4.19.2.2}%
+\contentsline {subsubsection}{\numberline {4.19.2.3}parse\_event\_type()}{56}{subsubsection.4.19.2.3}%
+\contentsline {section}{\numberline {4.20}workload.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{57}{section.4.20}%
+\contentsline {section}{\numberline {4.21}src/main.c File Reference}{57}{section.4.21}%
+\contentsline {subsection}{\numberline {4.21.1}Function Documentation}{58}{subsection.4.21.1}%
+\contentsline {subsubsection}{\numberline {4.21.1.1}argval()}{58}{subsubsection.4.21.1.1}%
+\contentsline {subsubsection}{\numberline {4.21.1.2}main()}{58}{subsubsection.4.21.1.2}%
+\contentsline {section}{\numberline {4.22}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{59}{section.4.22}%
+\contentsline {section}{\numberline {4.23}src/policies/avoidance\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}nohold.c File Reference}{61}{section.4.23}%
+\contentsline {subsection}{\numberline {4.23.1}Function Documentation}{61}{subsection.4.23.1}%
+\contentsline {subsubsection}{\numberline {4.23.1.1}on\_request\_impl()}{61}{subsubsection.4.23.1.1}%
+\contentsline {subsubsection}{\numberline {4.23.1.2}policy\_avoid\_nohold()}{62}{subsubsection.4.23.1.2}%
+\contentsline {section}{\numberline {4.24}avoidance\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}nohold.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{63}{section.4.24}%
+\contentsline {section}{\numberline {4.25}src/policies/avoidance\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}nohold.h File Reference}{63}{section.4.25}%
+\contentsline {subsection}{\numberline {4.25.1}Function Documentation}{64}{subsection.4.25.1}%
+\contentsline {subsubsection}{\numberline {4.25.1.1}policy\_avoid\_nohold()}{64}{subsubsection.4.25.1.1}%
+\contentsline {section}{\numberline {4.26}avoidance\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}nohold.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{65}{section.4.26}%
+\contentsline {section}{\numberline {4.27}src/policies/avoidance\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ordering.c File Reference}{65}{section.4.27}%
+\contentsline {subsection}{\numberline {4.27.1}Function Documentation}{65}{subsection.4.27.1}%
+\contentsline {subsubsection}{\numberline {4.27.1.1}on\_request\_impl()}{65}{subsubsection.4.27.1.1}%
+\contentsline {subsubsection}{\numberline {4.27.1.2}policy\_avoid\_ordering()}{66}{subsubsection.4.27.1.2}%
+\contentsline {section}{\numberline {4.28}avoidance\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ordering.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{66}{section.4.28}%
+\contentsline {section}{\numberline {4.29}src/policies/avoidance\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ordering.h File Reference}{67}{section.4.29}%
+\contentsline {subsection}{\numberline {4.29.1}Function Documentation}{68}{subsection.4.29.1}%
+\contentsline {subsubsection}{\numberline {4.29.1.1}policy\_avoid\_ordering()}{68}{subsubsection.4.29.1.1}%
+\contentsline {section}{\numberline {4.30}avoidance\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ordering.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{68}{section.4.30}%
+\contentsline {section}{\numberline {4.31}src/policies/avoidance\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}preempt.c File Reference}{69}{section.4.31}%
+\contentsline {subsection}{\numberline {4.31.1}Function Documentation}{69}{subsection.4.31.1}%
+\contentsline {subsubsection}{\numberline {4.31.1.1}on\_request\_impl()}{69}{subsubsection.4.31.1.1}%
+\contentsline {subsubsection}{\numberline {4.31.1.2}policy\_avoid\_preempt()}{70}{subsubsection.4.31.1.2}%
+\contentsline {section}{\numberline {4.32}avoidance\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}preempt.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{70}{section.4.32}%
+\contentsline {section}{\numberline {4.33}src/policies/avoidance\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}preempt.h File Reference}{71}{section.4.33}%
+\contentsline {subsection}{\numberline {4.33.1}Function Documentation}{72}{subsection.4.33.1}%
+\contentsline {subsubsection}{\numberline {4.33.1.1}policy\_avoid\_preempt()}{72}{subsubsection.4.33.1.1}%
+\contentsline {section}{\numberline {4.34}avoidance\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}preempt.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{72}{section.4.34}%
+\contentsline {section}{\numberline {4.35}src/policies/detector\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}matrix.c File Reference}{72}{section.4.35}%
+\contentsline {subsection}{\numberline {4.35.1}Function Documentation}{73}{subsection.4.35.1}%
+\contentsline {subsubsection}{\numberline {4.35.1.1}detect\_impl()}{73}{subsubsection.4.35.1.1}%
+\contentsline {subsubsection}{\numberline {4.35.1.2}detector\_matrix()}{74}{subsubsection.4.35.1.2}%
+\contentsline {subsubsection}{\numberline {4.35.1.3}leq\_need()}{75}{subsubsection.4.35.1.3}%
+\contentsline {section}{\numberline {4.36}detector\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}matrix.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{75}{section.4.36}%
+\contentsline {section}{\numberline {4.37}src/policies/detector\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}matrix.h File Reference}{76}{section.4.37}%
+\contentsline {subsection}{\numberline {4.37.1}Function Documentation}{77}{subsection.4.37.1}%
+\contentsline {subsubsection}{\numberline {4.37.1.1}detector\_matrix()}{77}{subsubsection.4.37.1.1}%
+\contentsline {section}{\numberline {4.38}detector\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}matrix.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{78}{section.4.38}%
+\contentsline {section}{\numberline {4.39}src/policies/detector\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}wfg.c File Reference}{78}{section.4.39}%
+\contentsline {subsection}{\numberline {4.39.1}Function Documentation}{78}{subsection.4.39.1}%
+\contentsline {subsubsection}{\numberline {4.39.1.1}detect\_impl()}{78}{subsubsection.4.39.1.1}%
+\contentsline {subsubsection}{\numberline {4.39.1.2}detector\_wfg()}{79}{subsubsection.4.39.1.2}%
+\contentsline {section}{\numberline {4.40}detector\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}wfg.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{80}{section.4.40}%
+\contentsline {section}{\numberline {4.41}src/policies/detector\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}wfg.h File Reference}{81}{section.4.41}%
+\contentsline {subsection}{\numberline {4.41.1}Function Documentation}{82}{subsection.4.41.1}%
+\contentsline {subsubsection}{\numberline {4.41.1.1}detector\_wfg()}{82}{subsubsection.4.41.1.1}%
+\contentsline {section}{\numberline {4.42}detector\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}wfg.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{82}{section.4.42}%
+\contentsline {section}{\numberline {4.43}src/policies/policy.h File Reference}{82}{section.4.43}%
+\contentsline {subsection}{\numberline {4.43.1}Enumeration Type Documentation}{83}{subsection.4.43.1}%
+\contentsline {subsubsection}{\numberline {4.43.1.1}Decision}{83}{subsubsection.4.43.1.1}%
+\contentsline {section}{\numberline {4.44}policy.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{84}{section.4.44}%
+\contentsline {section}{\numberline {4.45}src/policies/prevention\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}banker.c File Reference}{84}{section.4.45}%
+\contentsline {subsection}{\numberline {4.45.1}Function Documentation}{85}{subsection.4.45.1}%
+\contentsline {subsubsection}{\numberline {4.45.1.1}on\_request\_impl()}{85}{subsubsection.4.45.1.1}%
+\contentsline {subsubsection}{\numberline {4.45.1.2}policy\_banker()}{85}{subsubsection.4.45.1.2}%
+\contentsline {subsubsection}{\numberline {4.45.1.3}safety\_check()}{86}{subsubsection.4.45.1.3}%
+\contentsline {section}{\numberline {4.46}prevention\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}banker.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{86}{section.4.46}%
+\contentsline {section}{\numberline {4.47}src/policies/prevention\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}banker.h File Reference}{88}{section.4.47}%
+\contentsline {subsection}{\numberline {4.47.1}Function Documentation}{89}{subsection.4.47.1}%
+\contentsline {subsubsection}{\numberline {4.47.1.1}policy\_banker()}{89}{subsubsection.4.47.1.1}%
+\contentsline {section}{\numberline {4.48}prevention\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}banker.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{89}{section.4.48}%
+\contentsline {section}{\numberline {4.49}src/policies/resolver\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}abort.c File Reference}{90}{section.4.49}%
+\contentsline {subsection}{\numberline {4.49.1}Function Documentation}{90}{subsection.4.49.1}%
+\contentsline {subsubsection}{\numberline {4.49.1.1}held\_total()}{90}{subsubsection.4.49.1.1}%
+\contentsline {subsubsection}{\numberline {4.49.1.2}resolve\_impl()}{91}{subsubsection.4.49.1.2}%
+\contentsline {subsubsection}{\numberline {4.49.1.3}resolver\_abort()}{92}{subsubsection.4.49.1.3}%
+\contentsline {section}{\numberline {4.50}resolver\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}abort.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{92}{section.4.50}%
+\contentsline {section}{\numberline {4.51}src/policies/resolver\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}abort.h File Reference}{93}{section.4.51}%
+\contentsline {subsection}{\numberline {4.51.1}Function Documentation}{94}{subsection.4.51.1}%
+\contentsline {subsubsection}{\numberline {4.51.1.1}resolver\_abort()}{94}{subsubsection.4.51.1.1}%
+\contentsline {section}{\numberline {4.52}resolver\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}abort.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{94}{section.4.52}%
+\contentsline {section}{\numberline {4.53}src/policies/resolver\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rollback.c File Reference}{95}{section.4.53}%
+\contentsline {subsection}{\numberline {4.53.1}Function Documentation}{95}{subsection.4.53.1}%
+\contentsline {subsubsection}{\numberline {4.53.1.1}resolve\_impl()}{95}{subsubsection.4.53.1.1}%
+\contentsline {subsubsection}{\numberline {4.53.1.2}resolver\_rollback()}{96}{subsubsection.4.53.1.2}%
+\contentsline {section}{\numberline {4.54}resolver\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rollback.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{96}{section.4.54}%
+\contentsline {section}{\numberline {4.55}src/policies/resolver\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rollback.h File Reference}{97}{section.4.55}%
+\contentsline {subsection}{\numberline {4.55.1}Function Documentation}{98}{subsection.4.55.1}%
+\contentsline {subsubsection}{\numberline {4.55.1.1}resolver\_rollback()}{98}{subsubsection.4.55.1.1}%
+\contentsline {section}{\numberline {4.56}resolver\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rollback.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{98}{section.4.56}%

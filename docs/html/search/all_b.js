@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['parse_5fevent_5ftype_0',['parse_event_type',['../workload_8c.html#a080aac891486fed820877bbc65e14677',1,'parse_event_type(const char *s, EventType *out):&#160;workload.c'],['../workload_8h.html#a080aac891486fed820877bbc65e14677',1,'parse_event_type(const char *s, EventType *out):&#160;workload.c']]],
+  ['pid_1',['pid',['../struct_process.html#a595b4f93d83869f5cc3681cfeebc5609',1,'Process::pid'],['../struct_event.html#a0486648e6b146e83b3b505059297b45b',1,'Event::pid']]],
+  ['pid_5fto_5fidx_2',['pid_to_idx',['../struct_system_state.html#a7c3b79c5422138c9e4876d4d96480b22',1,'SystemState']]],
+  ['pids_3',['pids',['../struct_deadlock_set.html#aeb308819be34a2a1355ca8246d4e1ff2',1,'DeadlockSet']]],
+  ['pol_4',['pol',['../struct_engine.html#a8720a340319fa828f97c86fd347b8417',1,'Engine']]],
+  ['policy_2eh_5',['policy.h',['../policy_8h.html',1,'']]],
+  ['policy_5favoid_5fnohold_6',['policy_avoid_nohold',['../avoidance__nohold_8c.html#a10104c43ec76e2e1094e1168e2bc3a09',1,'policy_avoid_nohold(void):&#160;avoidance_nohold.c'],['../avoidance__nohold_8h.html#a10104c43ec76e2e1094e1168e2bc3a09',1,'policy_avoid_nohold(void):&#160;avoidance_nohold.c']]],
+  ['policy_5favoid_5fordering_7',['policy_avoid_ordering',['../avoidance__ordering_8c.html#ae9cd6ecb253a191ea203d1c443042ba3',1,'policy_avoid_ordering(void):&#160;avoidance_ordering.c'],['../avoidance__ordering_8h.html#ae9cd6ecb253a191ea203d1c443042ba3',1,'policy_avoid_ordering(void):&#160;avoidance_ordering.c']]],
+  ['policy_5favoid_5fpreempt_8',['policy_avoid_preempt',['../avoidance__preempt_8c.html#a797f2962fa85e122ebb2994084a08476',1,'policy_avoid_preempt(void):&#160;avoidance_preempt.c'],['../avoidance__preempt_8h.html#a797f2962fa85e122ebb2994084a08476',1,'policy_avoid_preempt(void):&#160;avoidance_preempt.c']]],
+  ['policy_5fbanker_9',['policy_banker',['../prevention__banker_8c.html#a0ee4f791cdb037548f2cf33a793fb6de',1,'policy_banker(void):&#160;prevention_banker.c'],['../prevention__banker_8h.html#a0ee4f791cdb037548f2cf33a793fb6de',1,'policy_banker(void):&#160;prevention_banker.c']]],
+  ['prevention_5fbanker_2ec_10',['prevention_banker.c',['../prevention__banker_8c.html',1,'']]],
+  ['prevention_5fbanker_2eh_11',['prevention_banker.h',['../prevention__banker_8h.html',1,'']]],
+  ['priority_12',['priority',['../struct_process.html#af87104e4190cb92aa510abc8647b318f',1,'Process']]],
+  ['proc_5factive_13',['proc_active',['../model_8c.html#aa3c0059bcf7fe112ca3748600fb2981c',1,'proc_active(ProcState st):&#160;model.c'],['../model_8h.html#aa3c0059bcf7fe112ca3748600fb2981c',1,'proc_active(ProcState st):&#160;model.c']]],
+  ['process_14',['Process',['../struct_process.html',1,'']]],
+  ['procs_15',['procs',['../struct_system_state.html#a6d1e10221dc5454ab0d48d7e20443144',1,'SystemState']]],
+  ['procstate_16',['ProcState',['../model_8h.html#a2cd36584fb8713253a7cccb671e022ad',1,'model.h']]],
+  ['progress_17',['progress',['../struct_process.html#a421fa1bc71f0044b034084a53ee51966',1,'Process']]],
+  ['ps_5faborted_18',['PS_ABORTED',['../model_8h.html#a2cd36584fb8713253a7cccb671e022ada6538f10c8cbb5dbd408a965b5548f739',1,'model.h']]],
+  ['ps_5fblocked_19',['PS_BLOCKED',['../model_8h.html#a2cd36584fb8713253a7cccb671e022ada04c361142369a00a37063d0e983d1648',1,'model.h']]],
+  ['ps_5ffinished_20',['PS_FINISHED',['../model_8h.html#a2cd36584fb8713253a7cccb671e022adac4bd92270ab58449a1752f67ec9e7090',1,'model.h']]],
+  ['ps_5fnew_21',['PS_NEW',['../model_8h.html#a2cd36584fb8713253a7cccb671e022adac47f7b586fa1283d87671f34b655fa7d',1,'model.h']]],
+  ['ps_5fready_22',['PS_READY',['../model_8h.html#a2cd36584fb8713253a7cccb671e022adad704bca1f4a52c376b2fc453fe8ecc9a',1,'model.h']]],
+  ['ps_5frolled_5fback_23',['PS_ROLLED_BACK',['../model_8h.html#a2cd36584fb8713253a7cccb671e022ada8bfc193a386b0d903d46d877986ac5f6',1,'model.h']]],
+  ['ps_5frunning_24',['PS_RUNNING',['../model_8h.html#a2cd36584fb8713253a7cccb671e022ada0abc21448f7a1b6511a02a8f74baab74',1,'model.h']]]
+];
